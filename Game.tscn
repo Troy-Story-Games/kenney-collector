@@ -1,32 +1,163 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Player/VRPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/dark_texture_07.material" type="Material" id=3]
 [ext_resource path="res://ConvayerBelt.tscn" type="PackedScene" id=5]
 
+[sub_resource type="Environment" id=1]
+background_mode = 1
+
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
 
-[node name="Convayer" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -0.801433 )
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
 
-[node name="CSGBox" type="CSGBox" parent="."]
+[node name="Convayer" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -1.15103 )
+
+[node name="Convayer2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -23.3343 )
+
+[node name="Convayer3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -48.8432 )
+
+[node name="Convayer4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -80.1192 )
+
+[node name="Convayer5" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -105.628 )
+
+[node name="Convayer6" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -135.123 )
+
+[node name="Convayer7" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -160.632 )
+
+[node name="Convayer8" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -191.908 )
+
+[node name="Convayer9" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -217.417 )
+
+[node name="Convayer10" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -249.629 )
+
+[node name="Convayer11" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -275.138 )
+
+[node name="Convayer12" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -306.414 )
+
+[node name="Convayer13" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -331.923 )
+
+[node name="Convayer14" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -361.419 )
+
+[node name="Convayer15" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -386.928 )
+
+[node name="Convayer16" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -418.204 )
+
+[node name="Convayer17" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -443.713 )
+
+[node name="Ceiling" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32507, 4.93955, -0.077935 )
 use_collision = true
 collision_mask = 0
-width = 40.0
+width = 1029.21
 height = 0.4
-depth = 45.4
+depth = 1016.26
+material = ExtResource( 3 )
+
+[node name="Floor" type="CSGBox" parent="."]
+use_collision = true
+collision_mask = 0
+width = 1029.21
+height = 0.4
+depth = 1016.26
 material = ExtResource( 3 )
 
 [node name="VRPlayer" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
 
 [node name="Spawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.41747, 1.10605, -0.763717 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.15, 1.52294, -1.11931 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, 0 )
+omni_range = 13.657
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -21.1468 )
+omni_range = 13.657
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -48.5322 )
+omni_range = 13.657
+
+[node name="OmniLight4" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -76.7079 )
+omni_range = 13.657
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -105.062 )
+omni_range = 13.657
+
+[node name="OmniLight6" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -134.202 )
+omni_range = 13.657
+
+[node name="OmniLight7" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -162.744 )
+omni_range = 13.657
+
+[node name="OmniLight8" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -190.412 )
+omni_range = 13.657
+
+[node name="OmniLight9" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -218.766 )
+omni_range = 13.657
+
+[node name="OmniLight10" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -247.906 )
+omni_range = 13.657
+
+[node name="OmniLight11" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -276.448 )
+omni_range = 13.657
+
+[node name="OmniLight12" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -305.694 )
+omni_range = 13.657
+
+[node name="OmniLight13" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -334.048 )
+omni_range = 13.657
+
+[node name="OmniLight14" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -363.187 )
+omni_range = 13.657
+
+[node name="OmniLight15" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -391.73 )
+omni_range = 13.657
+
+[node name="OmniLight16" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -421.187 )
+omni_range = 13.657
+
+[node name="OmniLight17" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.54433, -449.729 )
+omni_range = 13.657
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
