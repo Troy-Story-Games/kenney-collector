@@ -7,9 +7,6 @@ class_name Hand
 
 var controller = null
 var held_object : RigidBody = null
-var held_object_data = {
-    "mode": RigidBody.MODE_RIGID
-}
 
 onready var grabArea = $GrabArea
 onready var grabPos = $GrabPos
@@ -41,7 +38,6 @@ func trigger_action():
         return
 
     # Store the old mode for later and set it to static so we can move it
-    held_object_data["mode"] = held_object.mode
     held_object.mode = RigidBody.MODE_STATIC
 
     # This makes it so you can pickup the object and it doesn't just snap
@@ -55,7 +51,7 @@ func trigger_released_action():
     if not held_object:
         return
 
-    held_object.mode = held_object_data["mode"]
+    held_object.mode = RigidBody.MODE_RIGID
     grabPos.translation = Vector3.ZERO
     held_object.apply_impulse(Vector3(0, 0, 0), controller.controller_velocity)
     held_object = null
