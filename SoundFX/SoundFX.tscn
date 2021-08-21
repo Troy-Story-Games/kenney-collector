@@ -35,6 +35,33 @@ bus = "SoundFX"
 [node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="StreamPlayers"]
 bus = "SoundFX"
 
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer14" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer15" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer16" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer17" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer18" type="AudioStreamPlayer" parent="StreamPlayers"]
+bus = "SoundFX"
+
 [node name="StreamPlayers3D" type="Node" parent="."]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
@@ -62,4 +89,31 @@ bus = "SoundFX"
 bus = "SoundFX"
 
 [node name="AudioStreamPlayer3D9" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D10" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D11" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D12" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D13" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D14" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D15" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D16" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D17" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
+bus = "SoundFX"
+
+[node name="AudioStreamPlayer3D18" type="AudioStreamPlayer3D" parent="StreamPlayers3D"]
 bus = "SoundFX"

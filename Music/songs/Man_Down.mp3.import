@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Man_Down.mp3-6f971a6f5d74840a15d189603897c504.mp3str"
+
+[deps]
+
+source_file="res://Music/songs/Man_Down.mp3"
+dest_files=[ "res://.import/Man_Down.mp3-6f971a6f5d74840a15d189603897c504.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

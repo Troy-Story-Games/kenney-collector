@@ -1,31 +1,26 @@
 extends Resource
 class_name PlayerStats
 
-# Basic PlayerStats resource, modify as needed.
-# Retrieve a shared instance with Utils.get_player_stats()
-# from anywhere this is needed.
+enum WhichHand {
+    NONE,
+    LEFT,
+    RIGHT
+}
 
-signal player_died()
-signal player_health_changed(value)
-signal player_max_health_changed(value)
+signal score_changed(amount, result)
 
-var max_health : int = 1 setget set_max_health
-onready var health : int = max_health setget set_health
-
-
-func set_health(value : int):
-	health = int(clamp(value, 0, max_health))
-	emit_signal("player_health_changed", health)
-	if health == 0:
-		emit_signal("player_died")
+var total_score : int = 0 setget set_total_score
 
 
-func set_max_health(value : int):
-	max_health = value
-	self.health = int(min(self.health, max_health))
-	emit_signal("player_max_health_changed", max_health)
+func set_total_score(value : int):
+    var change_amount : int = value - total_score
+    total_score = value
+    emit_signal("score_changed", change_amount, total_score)
+
+
+func add_total_score(value : int):
+    self.total_score += value
 
 
 func refill_stats():
-	self.health = self.max_health
-	# TODO: Add any other stats that need to be refilled.
+    self.total_score = 0

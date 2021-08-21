@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Hands/Hand.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Hands/LeftHandModel.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0463815, 0.0382734, 0.110177 )
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.195356
+
+[node name="LeftHand" instance=ExtResource( 1 )]
+
+[node name="LeftHandModel" parent="." index="0" instance=ExtResource( 2 )]
+transform = Transform( -1.96701e-08, -0.318198, 0.318198, 0, 0.318198, 0.318198, -0.45, 1.39089e-08, -1.39089e-08, 0.0653341, 0, 0.0245668 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00619352, -0.0350041, -0.0304724 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape" parent="GrabArea" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0968086, -0.0897212, -0.0537245 )
+shape = SubResource( 2 )

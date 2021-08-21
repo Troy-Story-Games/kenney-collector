@@ -1,14 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://VRExample.gd" type="Script" id=1]
 [ext_resource path="res://Art/dark_texture_07.material" type="Material" id=2]
-[ext_resource path="res://VRPlayer/VRPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/VRPlayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Crate.tscn" type="PackedScene" id=4]
-[ext_resource path="res://VRPlayer/TeleportMesh.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Art/dark_texture_06.material" type="Material" id=6]
 
+[sub_resource type="GDScript" id=1]
+script/source = "extends Spatial
+
+
+func _ready():
+    Utils.initialize_vr()
+"
+
 [node name="VRExample" type="Spatial"]
-script = ExtResource( 1 )
+script = SubResource( 1 )
 
 [node name="Floor" type="CSGBox" parent="."]
 use_collision = true
@@ -1377,9 +1383,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 15, -6 )
 
 [node name="VRPlayer" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
-
-[node name="TeleportMesh" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="CSGBox" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 6, 0 )

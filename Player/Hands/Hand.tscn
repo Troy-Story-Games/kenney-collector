@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Hands/Hand.gd" type="Script" id=1]
+
+[node name="Hand" type="KinematicBody"]
+collision_layer = 2
+collision_mask = 4
+collision/safe_margin = 0.005
+script = ExtResource( 1 )
+
+[node name="GrabArea" type="Area" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="GrabArea"]
+
+[node name="GrabPos" type="Position3D" parent="."]

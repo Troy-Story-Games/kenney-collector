@@ -9,35 +9,40 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "BrickStats",
+"base": "RigidBody",
+"class": "Crate",
 "language": "GDScript",
-"path": "res://Enemies/EnemyStats.gd"
+"path": "res://Crate.gd"
 }, {
-"base": "ResourceFormatLoader",
-"class": "HTerrainDataLoader",
+"base": "StaticBody",
+"class": "GUIPanel",
 "language": "GDScript",
-"path": "res://addons/zylann.hterrain/hterrain_resource_loader.gd"
-}, {
-"base": "ResourceFormatSaver",
-"class": "HTerrainDataSaver",
-"language": "GDScript",
-"path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
-}, {
-"base": "Area",
-"class": "Hitbox",
-"language": "GDScript",
-"path": "res://Overlap/Hitbox.gd"
-}, {
-"base": "Area",
-"class": "Hurtbox",
-"language": "GDScript",
-"path": "res://Overlap/Hurtbox.gd"
+"path": "res://UI/GUIPanel3D.gd"
 }, {
 "base": "KinematicBody",
-"class": "Player",
+"class": "Hand",
 "language": "GDScript",
-"path": "res://Player/Player.gd"
+"path": "res://Player/Hands/Hand.gd"
+}, {
+"base": "Resource",
+"class": "MainInstances",
+"language": "GDScript",
+"path": "res://Utils/MainInstances.gd"
+}, {
+"base": "OculusTracker",
+"class": "OculusHandTracker",
+"language": "GDScript",
+"path": "res://addons/godot_ovrmobile/example_scenes/oculus_hand_tracker.gd"
+}, {
+"base": "OculusTracker",
+"class": "OculusTouchController",
+"language": "GDScript",
+"path": "res://addons/godot_ovrmobile/example_scenes/oculus_touch_controller.gd"
+}, {
+"base": "ARVRController",
+"class": "OculusTracker",
+"language": "GDScript",
+"path": "res://addons/godot_ovrmobile/example_scenes/oculus_tracker.gd"
 }, {
 "base": "Resource",
 "class": "PlayerStats",
@@ -47,24 +52,31 @@ _global_script_classes=[ {
 "base": "ARVRController",
 "class": "VRController",
 "language": "GDScript",
-"path": "res://VRPlayer/VRController.gd"
+"path": "res://Player/VRController.gd"
+}, {
+"base": "ARVROrigin",
+"class": "VRPlayer",
+"language": "GDScript",
+"path": "res://Player/VRPlayer.gd"
 } ]
 _global_script_class_icons={
-"BrickStats": "",
-"HTerrainDataLoader": "",
-"HTerrainDataSaver": "",
-"Hitbox": "",
-"Hurtbox": "",
-"Player": "",
+"Crate": "",
+"GUIPanel": "",
+"Hand": "",
+"MainInstances": "",
+"OculusHandTracker": "",
+"OculusTouchController": "",
+"OculusTracker": "",
 "PlayerStats": "",
-"VRController": ""
+"VRController": "",
+"VRPlayer": ""
 }
 
 [application]
 
-config/name="Godot 3D Template"
-config/description="TroyStoryGames template for a 3D game in Godot"
-run/main_scene="res://CSGExample.tscn"
+config/name="Rotation Station"
+config/description="Kenny Jam 2021 submissions - \"Rotation Station\""
+run/main_scene="res://Game.tscn"
 boot_splash/image="res://logo.png"
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
@@ -92,7 +104,7 @@ enabled=PoolStringArray( "zylann.hterrain" )
 
 [gdnative]
 
-singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
+singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
 
 [input]
 
@@ -134,13 +146,12 @@ jump={
 
 3d_physics/layer_1="World"
 3d_physics/layer_2="Player"
-3d_physics/layer_3="PlayerHurtbox"
-3d_physics/layer_4="EnemyHurtbox"
-3d_physics/layer_5="Pickup"
+3d_physics/layer_3="Objects"
 
 [physics]
 
 common/physics_fps=90
+3d/physics_engine="GodotPhysics"
 
 [rendering]
 
