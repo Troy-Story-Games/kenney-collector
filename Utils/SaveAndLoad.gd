@@ -7,7 +7,8 @@ const SAVE_FILE := "user://rotation_station_save_data.json"
 
 var custom_data := {
     "version": "0.0.1",
-    "seated_vr": true
+    "seated_vr": true,
+    "high_score": 0
 }
 
 

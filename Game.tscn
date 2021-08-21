@@ -1,32 +1,55 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Player/VRPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/dark_texture_07.material" type="Material" id=3]
-[ext_resource path="res://ConvayerBelt.tscn" type="PackedScene" id=5]
+[ext_resource path="res://InfoScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Convayer/ConvayerBelt.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Train.tscn" type="PackedScene" id=7]
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
 
-[node name="Convayer" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.569961, -0.801433 )
-
-[node name="CSGBox" type="CSGBox" parent="."]
+[node name="Floor" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5192, 0, -2.04831 )
 use_collision = true
 collision_mask = 0
-width = 40.0
+width = 13.1483
 height = 0.4
-depth = 45.4
+depth = 6.71524
 material = ExtResource( 3 )
+
+[node name="Floor2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63014, -4.38206, 0 )
+use_collision = true
+collision_mask = 0
+width = 13.6302
+height = 0.4
+depth = 110.829
+material = ExtResource( 3 )
+
+[node name="InfoScreen" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9 )
+
+[node name="Conveyor" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01026, 0.171345, -0.923642 )
+
+[node name="Portal" parent="Conveyor" instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.24294, 0.511831, 0.00164151 )
+collision_mask = 0
+
+[node name="Spawn" type="Position3D" parent="Conveyor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48327, 1.08648, -0.0139167 )
+
+[node name="Timer" type="Timer" parent="Conveyor"]
+wait_time = 0.5
+autostart = true
 
 [node name="VRPlayer" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
 
-[node name="Spawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.41747, 1.10605, -0.763717 )
+[node name="Train" parent="." instance=ExtResource( 7 )]
+transform = Transform( -4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, 3.25719, -4.25366, 4.53663 )
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Conveyor/Timer" to="." method="_on_Timer_timeout"]

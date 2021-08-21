@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_straightBarrier.obj-ced0872340a244b39991969f93acaf7e.mesh"
+
+[deps]
+
+files=[ "res://.import/road_straightBarrier.obj-ced0872340a244b39991969f93acaf7e.mesh" ]
+
+source_file="res://Art/Convayor/road_straightBarrier.obj"
+dest_files=[ "res://.import/road_straightBarrier.obj-ced0872340a244b39991969f93acaf7e.mesh", "res://.import/road_straightBarrier.obj-ced0872340a244b39991969f93acaf7e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

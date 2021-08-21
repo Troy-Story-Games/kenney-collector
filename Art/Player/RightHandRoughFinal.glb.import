@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/LeftHandRoughFinal.glb-191b94b784f10e429bf0b01a7d529c5c.scn"
+path="res://.import/RightHandRoughFinal.glb-003f7e6f71747e07706e3c8676a55171.scn"
 
 [deps]
 
-source_file="res://Art/LeftHandRoughFinal.glb"
-dest_files=[ "res://.import/LeftHandRoughFinal.glb-191b94b784f10e429bf0b01a7d529c5c.scn" ]
+source_file="res://Art/Player/RightHandRoughFinal.glb"
+dest_files=[ "res://.import/RightHandRoughFinal.glb-003f7e6f71747e07706e3c8676a55171.scn" ]
 
 [params]
 

@@ -2,7 +2,7 @@ extends Spatial
 
 const crate = preload("res://Crate.tscn")
 
-onready var spawn = $Spawn
+onready var spawn = $Conveyor/Spawn
 
 
 func _ready():
@@ -11,5 +11,5 @@ func _ready():
 
 
 func _on_Timer_timeout():
-    # warning-ignore:return_value_discarded
-    Utils.instance_scene_on_main(crate, spawn.global_transform)
+    var instance : RigidBody = Utils.instance_scene_on_main(crate, spawn.global_transform)
+    instance.apply_central_impulse(Vector3(5, 0, 0))

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bridge_pillar.obj-da0ed6b09140c087d400fff0f2f499ac.mesh"
+
+[deps]
+
+files=[ "res://.import/bridge_pillar.obj-da0ed6b09140c087d400fff0f2f499ac.mesh" ]
+
+source_file="res://Art/Convayor/bridge_pillar.obj"
+dest_files=[ "res://.import/bridge_pillar.obj-da0ed6b09140c087d400fff0f2f499ac.mesh", "res://.import/bridge_pillar.obj-da0ed6b09140c087d400fff0f2f499ac.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

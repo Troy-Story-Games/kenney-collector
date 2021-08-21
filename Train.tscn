@@ -1,0 +1,145 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Art/Train/monorail_trackStraight.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Art/Train/monorail_trackSupport.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Art/Train/monorail_trainFront.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Art/Train/monorail_trainCargo.obj" type="ArrayMesh" id=4]
+
+[node name="Train" type="Spatial"]
+
+[node name="Tracks" type="Spatial" parent="."]
+
+[node name="TrackSection" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection2" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 0.999814 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection3" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 1.99838 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection4" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 2.99819 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection5" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 3.96811 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection6" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 4.96792 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection7" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 5.96648 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="TrackSection8" type="MeshInstance" parent="Tracks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500058, 6.9663 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Support" type="MeshInstance" parent="Tracks/TrackSection8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Train" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.558583, 2.33816 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Storage" type="MeshInstance" parent="Train"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.03667 )
+mesh = ExtResource( 4 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+
+[node name="Storage2" type="MeshInstance" parent="Train"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0752 )
+mesh = ExtResource( 4 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
