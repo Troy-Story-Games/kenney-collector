@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/palm_long.obj-0045ae0f949197835f7f94b60f57cd79.mesh"
+
+[deps]
+
+files=[ "res://.import/palm_long.obj-0045ae0f949197835f7f94b60f57cd79.mesh" ]
+
+source_file="res://Art/Objects/CrateContents/palm_long.obj"
+dest_files=[ "res://.import/palm_long.obj-0045ae0f949197835f7f94b60f57cd79.mesh", "res://.import/palm_long.obj-0045ae0f949197835f7f94b60f57cd79.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
