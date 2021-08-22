@@ -1,6 +1,8 @@
 extends RigidBody
 class_name Crate
 
+const crateExplode = preload("res://Objects/CrateExplode.tscn")
+
 signal button_pressed()
 
 # warning-ignore:unused_class_variable
@@ -10,6 +12,7 @@ export(Color) var PRESSED_COLOR = Color.greenyellow
 var button_pressed = false
 
 onready var button = $Button
+onready var timer = $Timer
 
 
 func random_rotation():
@@ -23,14 +26,29 @@ func random_rotation():
     # Then decide how much to rotate it around the Y
     rotate_amnt = rand_range(0.0, 360.0)
     rotate(Vector3(0, 1, 0), deg2rad(rotate_amnt))
+    SoundFx.play_3d("BoxSpawn", global_transform.origin)
 
 
 func _on_ButtonPressArea_body_entered(_body):
+    SoundFx.play_3d("ButtonPress", global_transform.origin)
     var mesh : ArrayMesh = button.mesh
     var mat : SpatialMaterial = SpatialMaterial.new()
     mat.albedo_color = PRESSED_COLOR
     mesh.surface_set_material(1, mat)
     button_pressed = true
     emit_signal("button_pressed")
-    # TODO: Dissolve/Delete
-    # TODO: Spawn inner item
+    timer.start()
+
+
+func _on_Timer_timeout():
+    SoundFx.play_3d("BoxPoof", global_transform.origin)
+    var particles : CPUParticles = Utils.instance_scene_on_main(crateExplode, global_transform)
+    particles.emitting = true
+
+    var packed_scene : PackedScene = Utils.get_random_kenney_asset()
+
+    # warning-ignore:return_value_discarded
+    Utils.instance_scene_on_main(packed_scene, global_transform)
+
+    queue_free()
+

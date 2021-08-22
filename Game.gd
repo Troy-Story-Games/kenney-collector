@@ -7,10 +7,11 @@ export(float) var CONVEYOR_SPEED = 2.0
 onready var spawn = $Conveyor/Spawn
 onready var timer = $Conveyor/Timer
 onready var conveyor = $Conveyor
+onready var conveyorSound = $Conveyor/ConveyorSound
 
 
 func _ready():
-    Music.play("Menu")
+    Music.play("Game")
     Utils.initialize_vr()
 
 
@@ -23,5 +24,6 @@ func _on_Timer_timeout():
 
 func _on_StartCrate_button_pressed():
     conveyor.constant_linear_velocity = Vector3(CONVEYOR_SPEED, 0, 0)
+    conveyorSound.play()
     timer.start()
 

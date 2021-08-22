@@ -11,5 +11,5 @@ dest_files=[ "res://.import/ButtonPress.ogg-6aa946cf93fefa8497baf1f87299c3dc.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

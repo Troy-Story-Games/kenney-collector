@@ -11,5 +11,5 @@ dest_files=[ "res://.import/TrainExplosion2.ogg-7b04810a305343ecaa93d0f1e8b6f78e
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

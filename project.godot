@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "StaticBody",
-"class": "ConvayerBelt",
-"language": "GDScript",
-"path": "res://Conveyor/ConveyorBelt.gd"
-}, {
 "base": "RigidBody",
 "class": "Crate",
 "language": "GDScript",
@@ -65,7 +60,6 @@ _global_script_classes=[ {
 "path": "res://Player/VRPlayer.gd"
 } ]
 _global_script_class_icons={
-"ConvayerBelt": "",
 "Crate": "",
 "GUIPanel": "",
 "Hand": "",
@@ -80,7 +74,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Rotation Station"
+config/name="Keeney Collector"
 config/description="Kenny Jam 2021 submissions - \"Rotation Station\""
 run/main_scene="res://Game.tscn"
 boot_splash/image="res://logo.png"

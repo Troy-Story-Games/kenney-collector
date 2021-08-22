@@ -11,5 +11,5 @@ dest_files=[ "res://.import/BoxPoof.ogg-a0863801ec6f836b6890b44562f603ef.oggstr"
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

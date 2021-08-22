@@ -3,6 +3,7 @@ extends Node
 var vr_initialized := false
 var mobile_vr := false
 var mobile_vr_runtime_initialized := false
+var kenney_assets : Array = []
 
 
 func initialize_vr():
@@ -38,7 +39,25 @@ func initialize_vr():
             # Physics FPS set to 90 in project setttings for smooth interactions
             # Tweak this back to the default of 60 if not making a VR game.
 
+    load_kenney_assets()
     vr_initialized = true
+
+
+func load_kenney_assets():
+    # Load the kenney assets
+    kenney_assets = []
+    var kenney_asset_dir = Directory.new()
+    kenney_asset_dir.open("res://Objects/CrateContents")
+    kenney_asset_dir.list_dir_begin(true, true)
+    var asset = kenney_asset_dir.get_next()
+    while asset != "":
+        kenney_assets.append(load("res://Objects/CrateContents/" + asset))
+        asset = kenney_asset_dir.get_next()
+
+
+func get_random_kenney_asset() -> PackedScene:
+    kenney_assets.shuffle()
+    return kenney_assets[0]
 
 
 func instance_scene_on_main(packed_scene: PackedScene, position) -> Node:

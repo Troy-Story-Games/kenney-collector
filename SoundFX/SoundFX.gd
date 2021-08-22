@@ -2,9 +2,15 @@ extends Node
 
 # Auto-load singleton to play sound effects
 
-#var sounds_path = "res://SoundFX/sounds/"  USE SOMEDAY
+var sounds_path = "res://SoundFX/sounds/"
 
-var sounds := {}
+var sounds := {
+    "BoxSpawn": load(sounds_path + "BoxSpawn.ogg"),
+    "BoxPoof": load(sounds_path + "BoxPoof.ogg"),
+    "ButtonPress": load(sounds_path + "ButtonPress.ogg"),
+    "ConveyorSound": load(sounds_path + "ConveyorSound3.ogg"),
+    "ImpactSound": load(sounds_path + "ImpactSound.ogg")
+}
 
 onready var sound_players := $StreamPlayers.get_children()
 onready var sound_players_3d := $StreamPlayers3D.get_children()

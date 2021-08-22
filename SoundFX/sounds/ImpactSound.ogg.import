@@ -11,5 +11,5 @@ dest_files=[ "res://.import/ImpactSound.ogg-c6f2ca5ade1bff8bfbde3d6153f4e0f0.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
