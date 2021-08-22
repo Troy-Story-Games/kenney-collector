@@ -3,10 +3,10 @@
 [ext_resource path="res://UI/GUIPanel3D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/KenneyLogo.tscn" type="PackedScene" id=2]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 
-[sub_resource type="QuadMesh" id=1]
-material = SubResource( 2 )
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
 size = Vector2( 2, 1.172 )
 
 [sub_resource type="ViewportTexture" id=3]
@@ -23,5 +23,5 @@ size = Vector2( 1024, 600 )
 [node name="KenneyLogo" parent="Viewport" index="0" instance=ExtResource( 2 )]
 
 [node name="MeshInstance" parent="." index="2"]
-mesh = SubResource( 1 )
+mesh = SubResource( 2 )
 material/0 = SubResource( 4 )

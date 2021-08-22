@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Art/Objects/crateItem.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Objects/OptionCrate.gd" type="Script" id=2]
+[ext_resource path="res://UI/FasterButtonUI3D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/AdvanceTrainButtonUI3D.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.211781
+
+[sub_resource type="SphereShape" id=3]
+radius = 0.216518
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.154764, 0.14845, 0.1551 )
+
+[node name="OptionCrate" type="KinematicBody"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="Crate" type="MeshInstance" parent="."]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="FasterButtonArea" type="Area" parent="."]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.268993, 0 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="FasterButtonArea"]
+shape = SubResource( 2 )
+
+[node name="AdvanceTrainButtonArea" type="Area" parent="."]
+transform = Transform( 0.4, 0, 0, 0, -0.4, 3.49691e-08, 0, -3.49691e-08, -0.4, 0, 0.0288923, 0 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="AdvanceTrainButtonArea"]
+shape = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145684, 0 )
+shape = SubResource( 1 )
+
+[node name="FasterButtonUI3D" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.273273, 0 )
+
+[node name="AdvanceTrainButtonUI3D" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0293154, 0 )
+
+[connection signal="body_entered" from="FasterButtonArea" to="." method="_on_FasterButtonArea_body_entered"]
+[connection signal="body_entered" from="AdvanceTrainButtonArea" to="." method="_on_AdvanceTrainButtonArea_body_entered"]

@@ -1,4 +1,7 @@
 extends Node
 
-# Auto-load singleton to store shared events
-# that can be emitted and caught by anyone
+
+# warning-ignore:unused_signal
+signal global_toggle_faster()
+# warning-ignore:unused_signal
+signal global_toggle_train()
