@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cartonSmall.obj-01e2f98a457c93f04d5435aa5c0ba7f8.mesh"
+
+[deps]
+
+files=[ "res://.import/cartonSmall.obj-01e2f98a457c93f04d5435aa5c0ba7f8.mesh" ]
+
+source_file="res://Art/Objects/Contents/cartonSmall.obj"
+dest_files=[ "res://.import/cartonSmall.obj-01e2f98a457c93f04d5435aa5c0ba7f8.mesh", "res://.import/cartonSmall.obj-01e2f98a457c93f04d5435aa5c0ba7f8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

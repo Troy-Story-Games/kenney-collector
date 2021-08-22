@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ImpactSound.ogg-c6f2ca5ade1bff8bfbde3d6153f4e0f0.oggstr"
+
+[deps]
+
+source_file="res://SoundFX/sounds/ImpactSound.ogg"
+dest_files=[ "res://.import/ImpactSound.ogg-c6f2ca5ade1bff8bfbde3d6153f4e0f0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

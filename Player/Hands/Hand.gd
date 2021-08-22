@@ -39,6 +39,8 @@ func trigger_action():
 
     # Store the old mode for later and set it to static so we can move it
     held_object.mode = RigidBody.MODE_STATIC
+    # warning-ignore:return_value_discarded
+    held_object.connect("tree_exiting", self, "_on_held_object_tree_exiting")
 
     # This makes it so you can pickup the object and it doesn't just snap
     # to the center of your controller. (e.g. the pickup of the object
@@ -61,3 +63,7 @@ func grip_action():
     # This is called when the controller that has this hand applied
     # gets the grip_pressed signal
     pass  # Default implementation does nothing.
+
+
+func _on_held_object_tree_exiting():
+    held_object = null

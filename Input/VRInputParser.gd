@@ -112,7 +112,6 @@ func _on_VRController_button_pressed(button):
     match type:
         ControllerType.HTC_VIVE:
             if button == JOY_VR_TRIGGER:
-                print("dkfjsdfjhsdkjhfdskjhfsdjkhf")
                 emit_signal("trigger_pressed")
             elif button == JOY_VR_GRIP:
                 emit_signal("grip_pressed")

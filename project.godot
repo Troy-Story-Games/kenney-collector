@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "RigidBody",
 "class": "Crate",
 "language": "GDScript",
-"path": "res://Crate.gd"
+"path": "res://Objects/Crate.gd"
 }, {
 "base": "StaticBody",
 "class": "GUIPanel",
