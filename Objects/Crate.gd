@@ -9,6 +9,7 @@ signal button_pressed()
 export(int) var POINTS = 1
 export(Color) var PRESSED_COLOR = Color.greenyellow
 
+var playerStats = Utils.get_player_stats()
 var button_pressed = false
 
 onready var button = $Button
@@ -44,6 +45,7 @@ func delete_crate():
 func _on_ButtonPressArea_body_entered(_body):
     if button_pressed:
         return
+    playerStats.add_total_score(POINTS)
     button_pressed = true
 
     SoundFx.play_3d("ButtonPress", global_transform.origin)

@@ -7,20 +7,26 @@ enum WhichHand {
     RIGHT
 }
 
-signal score_changed(amount, result)
+signal score_changed(result)
+signal high_score_changed(result)
 
 var total_score : int = 0 setget set_total_score
+var high_score : int = 0 setget set_high_score
 
 
 func set_total_score(value : int):
-    var change_amount : int = value - total_score
     total_score = value
-    emit_signal("score_changed", change_amount, total_score)
+    if total_score > self.high_score:
+        self.high_score = total_score
+    emit_signal("score_changed", total_score)
+
+
+func set_high_score(value : int):
+    high_score = value
+    emit_signal("high_score_changed", high_score)
 
 
 func add_total_score(value : int):
     self.total_score += value
-
-
-func refill_stats():
-    self.total_score = 0
+    SaveAndLoad.custom_data.high_score = high_score
+    SaveAndLoad.save_game()

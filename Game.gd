@@ -5,6 +5,7 @@ const crateExplode = preload("res://Objects/CrateExplode.tscn")
 
 export(float) var CONVEYOR_SPEED = 2.0
 
+var playerStats = Utils.get_player_stats()
 var started = false
 var start_crate : Crate = null
 
@@ -14,9 +15,13 @@ onready var conveyor = $Conveyor
 onready var conveyorSound = $Conveyor/ConveyorSound
 onready var startCrateSpawn = $StartCrateSpawn
 onready var startCrateRespawnTimer = $StartCrateRespawnTimer
+onready var infoScreen = $InfoScreen
 
 
 func _ready():
+    SaveAndLoad.load_game()
+    playerStats.high_score = SaveAndLoad.custom_data.high_score
+
     Music.play("Game")
     Utils.initialize_vr()
     spawn_start_crate()
@@ -42,6 +47,7 @@ func _on_Timer_timeout():
 
 func _on_StartCrate_button_pressed():
     started = true
+    infoScreen.toggle()
     conveyor.constant_linear_velocity = Vector3(CONVEYOR_SPEED, 0, 0)
     conveyorSound.play()
     timer.start()
