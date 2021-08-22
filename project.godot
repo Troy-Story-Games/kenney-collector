@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "StaticBody",
 "class": "ConvayerBelt",
 "language": "GDScript",
-"path": "res://Convayer/ConvayerBelt.gd"
+"path": "res://Conveyor/ConveyorBelt.gd"
 }, {
 "base": "RigidBody",
 "class": "Crate",

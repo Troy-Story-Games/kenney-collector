@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/craft_speederD.obj-f39cacb8d23c8b2e0bba4b1e45f100ed.mesh"
+
+[deps]
+
+files=[ "res://.import/craft_speederD.obj-f39cacb8d23c8b2e0bba4b1e45f100ed.mesh" ]
+
+source_file="res://Art/Environment/craft_speederD.obj"
+dest_files=[ "res://.import/craft_speederD.obj-f39cacb8d23c8b2e0bba4b1e45f100ed.mesh", "res://.import/craft_speederD.obj-f39cacb8d23c8b2e0bba4b1e45f100ed.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -4,7 +4,7 @@
 [ext_resource path="res://Art/Convayor/road_straightBarrier.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Art/Convayor/road_straight.obj" type="ArrayMesh" id=3]
 
-[node name="ConvayerSection" type="Spatial"]
+[node name="ConveyorSection" type="Spatial"]
 
 [node name="Pillar1" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4 )
