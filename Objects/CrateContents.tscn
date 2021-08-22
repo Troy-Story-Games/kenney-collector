@@ -1,7 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Crate.tscn" type="PackedScene" id=2]
 
 [node name="CrateContents" type="RigidBody"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+
+[node name="ReferenceCrate" parent="." instance=ExtResource( 2 )]
+visible = false
