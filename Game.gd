@@ -18,10 +18,11 @@ onready var spawn = $Conveyor/Spawn
 onready var timer = $Conveyor/Timer
 onready var conveyor = $Conveyor
 onready var conveyorSound = $Conveyor/ConveyorSound
-onready var startCrateSpawn = $StartCrateSpawn
-onready var startCrateRespawnTimer = $StartCrateRespawnTimer
+onready var startCrateSpawn = $Spawns/StartCrateSpawn
+onready var startCrateRespawnTimer = $Spawns/StartCrateRespawnTimer
+onready var optionCrateSpawn = $Spawns/OptionCrateSpawn
 onready var infoScreen = $InfoScreen
-onready var optionCrateSpawn = $OptionCrateSpawn
+onready var train = $Train
 
 
 func _ready():
@@ -37,6 +38,8 @@ func _ready():
     Events.connect("global_toggle_faster", self, "_on_Events_global_toggle_faster")
     # warning-ignore:return_value_discarded
     Events.connect("global_toggle_train", self, "_on_Events_global_toggle_train")
+    # warning-ignore:return_value_discarded
+    Events.connect("global_train_at_station", self, "_on_Events_global_train_at_station")
 
 
 func spawn_option_crate():
@@ -57,6 +60,18 @@ func spawn_start_crate():
     start_crate.connect("button_pressed", self, "_on_StartCrate_button_pressed")
 
 
+func start_conveyor():
+    conveyor.constant_linear_velocity = Vector3(CONVEYOR_SPEED, 0, 0)
+    conveyorSound.play()
+    timer.start(spawn_rate)
+
+
+func stop_conveyor():
+    conveyor.constant_linear_velocity = Vector3.ZERO
+    conveyorSound.stop()
+    timer.stop()
+
+
 func _on_Timer_timeout():
     var instance : Crate = Utils.instance_scene_on_main(crate, spawn.global_transform)
     instance.apply_central_impulse(Vector3(5, 0, 0))
@@ -67,9 +82,7 @@ func _on_Timer_timeout():
 func _on_StartCrate_button_pressed():
     started = true
     infoScreen.toggle()
-    conveyor.constant_linear_velocity = Vector3(CONVEYOR_SPEED, 0, 0)
-    conveyorSound.play()
-    timer.start(spawn_rate)
+    start_conveyor()
 
 
 func _on_StartCrate_tree_exiting():
@@ -99,4 +112,12 @@ func _on_Events_global_toggle_faster():
 
 
 func _on_Events_global_toggle_train():
-    pass
+    train.toggle()
+    if train.on:
+        stop_conveyor()
+    else:
+        start_conveyor()
+
+
+func _on_Events_global_train_at_station():
+    start_conveyor()

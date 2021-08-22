@@ -86,13 +86,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Rotation Station"
-config/description="Kenny Jam 2021 submissions - \"Rotation Station\""
+config/name="Kenney Collector (VR)"
+config/description="Kenney Collection simulator. Collect them all!"
 run/main_scene="res://Game.tscn"
 boot_splash/image="res://logo.png"
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://icon.png"
+config/icon="res://Crate.png"
+config/windows_native_icon="res://Crate.ico"
 
 [autoload]
 
@@ -164,6 +165,7 @@ jump={
 3d_physics/layer_1="World"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Objects"
+3d_physics/layer_4="Train"
 
 [physics]
 
@@ -172,4 +174,5 @@ common/physics_fps=90
 
 [rendering]
 
+vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"

@@ -9,7 +9,10 @@ var sounds := {
     "BoxPoof": load(sounds_path + "BoxPoof.ogg"),
     "ButtonPress": load(sounds_path + "ButtonPress.ogg"),
     "ConveyorSound": load(sounds_path + "ConveyorSound3.ogg"),
-    "ImpactSound": load(sounds_path + "ImpactSound.ogg")
+    "ImpactSound": load(sounds_path + "ImpactSound.ogg"),
+    "TrainSound": load(sounds_path + "TrainSound.ogg"),
+    "OptionToggle": load(sounds_path + "OptionToggle.ogg"),
+    "TrainExplosion": load(sounds_path + "TrainExplosion.ogg")
 }
 
 onready var sound_players := $StreamPlayers.get_children()

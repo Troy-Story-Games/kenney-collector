@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/GUIPanel3D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/KenneyLogo.tscn" type="PackedScene" id=2]
@@ -15,7 +15,42 @@ size = Vector2( 2, 1.172 )
 flags_unshaded = true
 albedo_texture = SubResource( 3 )
 
+[sub_resource type="Animation" id=5]
+resource_name = "Dance"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, -35 ), Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Rotate"
+length = 15.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -359 ) ]
+}
+
 [node name="KenneyLogoUI3D" instance=ExtResource( 1 )]
+transform = Transform( 0.99833, 0.0577668, 0, -0.0577668, 0.99833, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Viewport" parent="." index="0"]
 size = Vector2( 1024, 600 )
@@ -25,3 +60,8 @@ size = Vector2( 1024, 600 )
 [node name="MeshInstance" parent="." index="2"]
 mesh = SubResource( 2 )
 material/0 = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+autoplay = "Rotate"
+anims/Dance = SubResource( 5 )
+anims/Rotate = SubResource( 6 )
