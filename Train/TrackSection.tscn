@@ -9,6 +9,18 @@ mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 
+[node name="Section2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="Section3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
 [node name="Support" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
 mesh = ExtResource( 1 )
@@ -137,41 +149,6 @@ material/2 = null
 
 [node name="Support19" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.35006, 0 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-
-[node name="Support20" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.84121, 0 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-
-[node name="Support21" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.3412, 0 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-
-[node name="Support22" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.8251, 0 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-
-[node name="Support23" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.3162, 0 )
-mesh = ExtResource( 1 )
-material/0 = null
-material/1 = null
-material/2 = null
-
-[node name="Support24" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.8162, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null

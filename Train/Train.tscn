@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Art/Environment/corridor_detailed.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Train/Train.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Train/TrackSection.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Train/Storage.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Train/Engine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/Train/monorail_trackStraight.obj" type="ArrayMesh" id=7]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -63,307 +64,178 @@ material/2 = null
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 0 )
 
 [node name="TrackSection2" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 4 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 11.9926 )
 
 [node name="TrackSection3" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 11.9059 )
-
-[node name="TrackSection7" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 8 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 23.9926 )
 
 [node name="TrackSection4" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -12 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 35.8 )
 
 [node name="TrackSection5" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -8 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 47.7926 )
 
 [node name="TrackSection6" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -4 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 59.7926 )
+
+[node name="TrackSection7" parent="Background" instance=ExtResource( 4 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 71.8 )
 
 [node name="TrackSection8" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 27.7763 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 83.7926 )
 
 [node name="TrackSection9" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 31.7763 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 95.7926 )
 
 [node name="TrackSection10" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 39.6822 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 107.6 )
 
 [node name="TrackSection11" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 35.7763 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 119.593 )
 
 [node name="TrackSection12" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 15.7763 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 131.593 )
 
 [node name="TrackSection13" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 19.7763 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -143.5 )
 
 [node name="TrackSection14" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 23.7763 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -131.507 )
 
 [node name="TrackSection15" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 55.6726 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -119.507 )
 
 [node name="TrackSection16" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 59.6726 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -107.7 )
 
 [node name="TrackSection17" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 67.5785 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -95.7074 )
 
 [node name="TrackSection18" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 63.6726 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -83.7074 )
 
 [node name="TrackSection19" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 43.6726 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -71.7 )
 
 [node name="TrackSection20" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 47.6726 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -59.7074 )
 
 [node name="TrackSection21" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 51.6726 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -47.7074 )
 
 [node name="TrackSection22" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 83.449 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -35.9 )
 
 [node name="TrackSection23" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 87.449 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -23.9074 )
 
 [node name="TrackSection24" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 95.3549 )
-
-[node name="TrackSection25" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 91.449 )
-
-[node name="TrackSection26" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 71.449 )
-
-[node name="TrackSection27" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 75.449 )
-
-[node name="TrackSection28" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 79.449 )
-
-[node name="TrackSection29" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 110.723 )
-
-[node name="TrackSection30" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 114.723 )
-
-[node name="TrackSection31" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 122.629 )
-
-[node name="TrackSection32" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 118.723 )
-
-[node name="TrackSection33" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 98.7231 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -11.9074 )
 
 [node name="TrackSection34" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 102.723 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -179.2 )
 
 [node name="TrackSection35" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 106.723 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -167.207 )
 
 [node name="TrackSection36" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 138.499 )
-
-[node name="TrackSection37" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 142.499 )
-
-[node name="TrackSection38" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 150.405 )
-
-[node name="TrackSection39" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 146.499 )
-
-[node name="TrackSection40" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 126.499 )
-
-[node name="TrackSection41" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 130.499 )
-
-[node name="TrackSection42" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 134.499 )
-
-[node name="TrackSection43" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -109.92 )
-
-[node name="TrackSection44" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -105.92 )
-
-[node name="TrackSection45" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -98.0137 )
-
-[node name="TrackSection46" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -101.92 )
-
-[node name="TrackSection85" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -133.824 )
-
-[node name="TrackSection86" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -125.918 )
-
-[node name="TrackSection87" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -129.824 )
-
-[node name="TrackSection88" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -145.316 )
-
-[node name="TrackSection89" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -137.41 )
-
-[node name="TrackSection90" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -141.316 )
-
-[node name="TrackSection91" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -156.845 )
-
-[node name="TrackSection92" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -148.939 )
-
-[node name="TrackSection93" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -152.845 )
-
-[node name="TrackSection94" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -168.31 )
-
-[node name="TrackSection95" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -160.404 )
-
-[node name="TrackSection96" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -164.31 )
-
-[node name="TrackSection97" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -180.131 )
-
-[node name="TrackSection98" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -172.225 )
-
-[node name="TrackSection99" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -176.131 )
-
-[node name="TrackSection100" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -191.131 )
-
-[node name="TrackSection101" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -183.225 )
-
-[node name="TrackSection102" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -187.131 )
-
-[node name="TrackSection47" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -121.92 )
-
-[node name="TrackSection48" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -117.92 )
-
-[node name="TrackSection49" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -113.92 )
-
-[node name="TrackSection50" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -82.1433 )
-
-[node name="TrackSection51" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -78.1433 )
-
-[node name="TrackSection52" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -70.2374 )
-
-[node name="TrackSection53" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -74.1432 )
-
-[node name="TrackSection54" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -94.1433 )
-
-[node name="TrackSection55" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -90.1432 )
-
-[node name="TrackSection56" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -86.1432 )
-
-[node name="TrackSection57" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -54.2469 )
-
-[node name="TrackSection58" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -50.2469 )
-
-[node name="TrackSection59" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -42.3411 )
-
-[node name="TrackSection60" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -46.2469 )
-
-[node name="TrackSection61" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -66.2469 )
-
-[node name="TrackSection62" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -62.2469 )
-
-[node name="TrackSection63" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -58.2469 )
-
-[node name="TrackSection64" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -26.4706 )
-
-[node name="TrackSection65" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -22.4706 )
-
-[node name="TrackSection66" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -14.5647 )
-
-[node name="TrackSection67" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -18.4706 )
-
-[node name="TrackSection68" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -38.4706 )
-
-[node name="TrackSection69" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -34.4706 )
-
-[node name="TrackSection70" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -30.4706 )
-
-[node name="TrackSection71" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 0.803485 )
-
-[node name="TrackSection72" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 4.80348 )
-
-[node name="TrackSection73" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 12.7094 )
-
-[node name="TrackSection74" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 8.80348 )
-
-[node name="TrackSection75" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -11.1965 )
-
-[node name="TrackSection76" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -7.19652 )
-
-[node name="TrackSection77" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -3.19651 )
-
-[node name="TrackSection78" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 28.5798 )
-
-[node name="TrackSection79" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 32.5798 )
-
-[node name="TrackSection80" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 40.4857 )
-
-[node name="TrackSection81" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 36.5798 )
-
-[node name="TrackSection82" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 16.5798 )
-
-[node name="TrackSection83" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 20.5798 )
-
-[node name="TrackSection84" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 24.5798 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -155.207 )
+
+[node name="JustTrack" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -187 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack2" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -191 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack3" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -195 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack4" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -199 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack5" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -203 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack6" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -207 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack7" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -211 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack8" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -215 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack9" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -219 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack10" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -223 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack11" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -227 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack12" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -231 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack13" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -235 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack14" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -239 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack15" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -243 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="JustTrack16" type="MeshInstance" parent="Background"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -247 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
 
 [node name="EndOfTrackArea" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00882, 2.00448, -184.888 )
