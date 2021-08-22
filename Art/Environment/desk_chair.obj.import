@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/desk_chair.obj-0ffd82b6dfd1042b4daa7d4416a3a394.mesh"
+
+[deps]
+
+files=[ "res://.import/desk_chair.obj-0ffd82b6dfd1042b4daa7d4416a3a394.mesh" ]
+
+source_file="res://Art/Environment/desk_chair.obj"
+dest_files=[ "res://.import/desk_chair.obj-0ffd82b6dfd1042b4daa7d4416a3a394.mesh", "res://.import/desk_chair.obj-0ffd82b6dfd1042b4daa7d4416a3a394.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

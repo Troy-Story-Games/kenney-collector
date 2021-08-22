@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/formationLarge_rock.obj-f3e93fec61ad1acdf8006cfbc3cd669e.mesh"
+
+[deps]
+
+files=[ "res://.import/formationLarge_rock.obj-f3e93fec61ad1acdf8006cfbc3cd669e.mesh" ]
+
+source_file="res://Art/Environment/formationLarge_rock.obj"
+dest_files=[ "res://.import/formationLarge_rock.obj-f3e93fec61ad1acdf8006cfbc3cd669e.mesh", "res://.import/formationLarge_rock.obj-f3e93fec61ad1acdf8006cfbc3cd669e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

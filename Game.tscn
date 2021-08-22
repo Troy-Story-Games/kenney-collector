@@ -1,12 +1,43 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Player/VRPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/dark_texture_07.material" type="Material" id=3]
-[ext_resource path="res://InfoScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Environment/terrain.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://Convayer/ConvayerBelt.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Train.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Environment/formation_stone.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://Art/Environment/formation_rock.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://Art/Environment/meteor_detailed.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://Art/Environment/alien.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://Art/Environment/craft_speederD.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://Art/Environment/craterLarge.obj" type="ArrayMesh" id=13]
+[ext_resource path="res://Art/Environment/desk_chair.obj" type="ArrayMesh" id=14]
+[ext_resource path="res://Art/Environment/platform_cornerOpen.obj" type="ArrayMesh" id=15]
+[ext_resource path="res://Art/Environment/platform_center.obj" type="ArrayMesh" id=16]
+[ext_resource path="res://Art/Environment/platform_side.obj" type="ArrayMesh" id=17]
+[ext_resource path="res://Art/Environment/stairs.obj" type="ArrayMesh" id=18]
+[ext_resource path="res://Art/Environment/stairs_corner.obj" type="ArrayMesh" id=19]
+[ext_resource path="res://Art/Environment/platform_end.obj" type="ArrayMesh" id=20]
+[ext_resource path="res://Art/Environment/corridor_detailed.obj" type="ArrayMesh" id=21]
+
+[sub_resource type="ProceduralSky" id=1]
+radiance_size = 4
+sky_top_color = Color( 0.529412, 0.768627, 1, 0.266667 )
+sky_horizon_color = Color( 1, 0.584314, 0, 1 )
+sky_curve = 0.0839729
+ground_bottom_color = Color( 0.137255, 0.290196, 0.490196, 1 )
+ground_horizon_color = Color( 0.992157, 0.270588, 0.152941, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0, 0, 0, 1 )
 
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
@@ -19,18 +50,6 @@ width = 13.1483
 height = 0.4
 depth = 6.71524
 material = ExtResource( 3 )
-
-[node name="Floor2" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63014, -4.38206, 0 )
-use_collision = true
-collision_mask = 0
-width = 13.6302
-height = 0.4
-depth = 110.829
-material = ExtResource( 3 )
-
-[node name="InfoScreen" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9 )
 
 [node name="Conveyor" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01026, 0.171345, -0.923642 )
@@ -52,4 +71,623 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
 [node name="Train" parent="." instance=ExtResource( 7 )]
 transform = Transform( -4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, 3.25719, -4.25366, 4.53663 )
 
+[node name="formation_stone" type="MeshInstance" parent="."]
+transform = Transform( 8.66025, 0, 5, 0, 4.299, 0, -5, 0, 8.66025, -58.505, -35.911, 67.701 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="formation_rock" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 3.437, 0, -9.53674e-07, 0, 4.203, 0, 8.34465e-07, 0, 3.592, 7.41016, -11.1129, -5.7712 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock3" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1.381, 0, 3.57628e-07, 0, 3.656, 0, 3.57628e-07, 0, -1.613, 4.71084, -11.1129, -1.09584 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock4" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.65587, 0, 2.38419e-07, 0, 1, 1.99064, -11.1129, 3.61569 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock5" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.65587, 0, 2.38419e-07, 0, 1, 15.0538, -11.1129, -19.0104 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock6" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.08616e-07, 0, 3.167, 0, 2.08616e-07, 0, 1, 12.3336, -11.1129, -14.2989 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock7" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.167, 0, 2.38419e-07, 0, 1, 21.5638, -11.1129, -8.96989 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock10" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.167, 0, 2.38419e-07, 0, 1, 24.9616, -11.1129, -14.8551 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock11" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.167, 0, 2.38419e-07, 0, 1, 28.9669, -11.1129, -21.7924 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock12" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.167, 0, 2.38419e-07, 0, 1, 33.2173, -11.1129, -29.1544 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock13" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16701, 0, 2.38419e-07, 0, 1, 34.2089, -1.64699, -22.1492 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock14" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16701, 0, 2.38419e-07, 0, 1, 30.6737, -1.64699, -16.026 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock15" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16701, 0, 2.38419e-07, 0, 1, 26.5792, -1.64699, -8.93425 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock16" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16701, 0, 2.38419e-07, 0, 1, 23.1584, -1.64699, -3.00924 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock17" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16701, 0, 2.38419e-07, 0, 1, 16.8728, -1.64699, 19.4718 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock18" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16702, 0, 2.38419e-07, 0, 1, 10.5837, -2.60298, 19.475 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock19" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16702, 0, 2.38419e-07, 0, 1, 5.29039, -4.33431, 16.4189 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock20" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16702, 0, 2.38419e-07, 0, 1, 22.7587, -4.33431, 26.5042 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock21" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16702, 0, 2.38419e-07, 0, 1, 30.7822, -4.33431, 12.6071 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock22" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.16702, 0, 2.38419e-07, 0, 1, 26.7158, -4.33431, 8.02356 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="formation_rock8" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 1, 0, -2.38419e-07, 0, 3.65587, 0, 2.38419e-07, 0, 1, 20.2652, -11.1129, -28.0368 )
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="meteor_detailed" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 4.60329, 0, 1.19209e-07, 0, 4.60329, 0, -1.19209e-07, 0, 4.60329, 13.1087, -1.62942, 9.06442 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed2" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 4.60329, 0, 1.19209e-07, 0, 4.60329, 0, -1.19209e-07, 0, 4.60329, 7.04478, -2.69312, 19.5674 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed3" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 4.60329, 0, 1.19209e-07, 0, 4.60329, 0, -1.19209e-07, 0, 4.60329, 9.92681, -2.69312, 19.8428 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed5" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 19.4192, -6.43534, 25.3232 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed6" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 20.2193, -6.43534, 23.9373 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed7" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 21.7095, -6.43534, 21.3561 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed8" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 23.9843, -2.8893, 27.9589 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed9" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 24.7844, -2.8893, 26.573 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed10" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 26.2747, -2.8893, 23.9918 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed11" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 26.9583, -2.8893, 29.6759 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed12" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 27.7584, -2.8893, 28.29 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed13" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 29.2487, -2.8893, 25.7088 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed14" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 23.1215, -2.8893, 36.3213 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed15" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 23.9217, -2.8893, 34.9355 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed16" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 25.4119, -2.8893, 32.3543 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed17" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 29.1902, -2.8893, 39.8251 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed18" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 29.9903, -2.8893, 38.4392 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed19" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 31.4806, -2.8893, 35.858 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed20" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 33.7701, -1.03367, 31.8925 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed21" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 34.5703, -1.03367, 30.5066 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed22" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 36.0605, -1.03367, 27.9254 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed23" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 26.2366, -1.03367, 44.9409 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed24" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 27.0367, -1.03367, 43.555 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed25" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 9.87977, 0, 4.76837e-07, 0, 9.87977, 0, -4.76837e-07, 0, 9.87977, 28.5269, -1.03367, 40.9739 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="meteor_detailed4" type="MeshInstance" parent="formation_stone"]
+transform = Transform( 2.71957, 0, 3.71405, 0, 4.60329, 0, -3.71405, 0, 2.71957, 9.92681, -0.814953, 19.8428 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="terrain" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -15.628, -40.6623, 90.6831 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain2" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 180.816, -40.6623, 90.6831 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain3" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -15.628, -40.6623, 286.105 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain4" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 180.816, -40.6623, 286.105 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain5" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 376.833, -40.6623, 286.105 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain6" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 573.277, -40.6623, 286.105 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain7" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 376.833, -40.6623, 91.1901 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain8" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 573.277, -40.6623, 91.1901 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain9" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -407.076, -40.6623, 91.1901 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain10" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -210.631, -40.6623, 91.1901 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain11" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -471.367, -40.6623, -107.482 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain12" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -274.922, -40.6623, -107.482 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain13" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -86.2501, -40.6623, -107.482 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain14" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 110.194, -40.6623, -107.482 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain15" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, -86.2501, -40.6623, -229.428 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="terrain16" type="MeshInstance" parent="."]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 200, 110.194, -40.6623, -229.428 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="craft_speederD" type="MeshInstance" parent="."]
+transform = Transform( -11.4587, 0, 10.2929, -4.9219, 13.5276, -5.47939, -9.03979, -7.36538, -10.0637, 78.6425, -43.6334, 150.32 )
+mesh = ExtResource( 12 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="alien" type="MeshInstance" parent="."]
+transform = Transform( 2.28912, 0, -3.71002, 0, 4.35939, 0, 3.71002, 0, 2.28912, 33.9032, 31.3671, -31.0084 )
+mesh = ExtResource( 11 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+material/17 = null
+
+[node name="craterLarge" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, 52.2478, -40.7369, 10.6408 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge2" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, 52.2478, -40.7369, 142.574 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge3" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, 114.255, -40.7369, 167.474 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge4" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, 182.654, -40.7369, 167.474 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge5" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, 131.082, -40.7369, 76.1987 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge6" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, 84.6382, -40.7369, 64.6315 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge7" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, -119.124, -40.7369, 64.6315 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="craterLarge8" type="MeshInstance" parent="."]
+transform = Transform( 17.3737, 0, 0, 0, 17.3737, 0, 0, 0, 17.3737, -23.4565, -40.7369, 106.161 )
+mesh = ExtResource( 13 )
+material/0 = null
+material/1 = null
+
+[node name="desk_chair" type="MeshInstance" parent="."]
+transform = Transform( 3.47486, 0, 0, 0, 3.47486, 0, 0, 0, 3.47486, -0.0816507, 0.203876, 0.613446 )
+mesh = ExtResource( 14 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Node" type="Node" parent="."]
+
+[node name="platform_side" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.93811, 0.171643, -3.56119 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side2" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93807, 0.171643, -3.56119 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side3" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94595, 0.171643, -3.56119 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side4" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9459, 0.171643, -3.56119 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side5" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0422114, 0.171643, -3.56119 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side6" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04226, 0.171643, -3.56119 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side13" type="MeshInstance" parent="Node"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.709, 0.171359, -2.56779 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side14" type="MeshInstance" parent="Node"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.709, 0.171359, -1.57263 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side15" type="MeshInstance" parent="Node"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.709, 0.171359, 0.152879 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side16" type="MeshInstance" parent="Node"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.709, 0.171359, -0.780316 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_center" type="MeshInstance" parent="Node/platform_side16"]
+transform = Transform( 4.62664, 0, 7.95023e-08, 0, 1, 0, 7.95024e-08, 0, 6.44544, -0.509, 0.013, 3.657 )
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="platform_cornerOpen" type="MeshInstance" parent="Node"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92826, 0.170453, -3.56735 )
+mesh = ExtResource( 15 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="platform_cornerOpen2" type="MeshInstance" parent="Node"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.708, 0.172359, -3.567 )
+mesh = ExtResource( 15 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="platform_side7" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, 0.717848, 0.171643, 1.13249 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side8" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, -0.282187, 0.171643, 1.12815 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side9" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, -1.2743, 0.171643, 1.12383 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side10" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, -2.27434, 0.171643, 1.11949 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side11" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, -3.26244, 0.171643, 1.11519 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_side12" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, -4.26248, 0.171643, 1.11085 )
+mesh = ExtResource( 17 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="platform_cornerOpen3" type="MeshInstance" parent="Node"]
+transform = Transform( -0.999991, 0, 0.00434579, 0, 1, 0, -0.00434579, 0, -0.999991, 1.70796, 0.170453, 1.14296 )
+mesh = ExtResource( 15 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="platform_cornerOpen4" type="MeshInstance" parent="Node"]
+transform = Transform( 0.00434584, 0, 0.999991, 0, 1, 0, -0.999991, 0, 0.00434584, -4.92824, 0.172359, 1.11376 )
+mesh = ExtResource( 15 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Stairway" type="Spatial" parent="."]
+
+[node name="corridor_detailed" type="MeshInstance" parent="Stairway"]
+transform = Transform( -6.73265e-08, 0, 1.54025, 0, 1.86856, 0, -1.86856, 0, -8.16775e-08, -4.76376, -2.76562, 2.94587 )
+mesh = ExtResource( 21 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+
+[node name="stairs_corner" type="MeshInstance" parent="Stairway"]
+transform = Transform( -0.0356776, 0, -2.91596, 0, 2.91618, 0, -2.91596, 0, 0.0356776, 0.687367, -1.27019, 2.9261 )
+mesh = ExtResource( 19 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="stairs" type="MeshInstance" parent="Stairway/stairs_corner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00364923, -0.46091, 0.601192 )
+mesh = ExtResource( 18 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="platform_end" type="MeshInstance" parent="Stairway"]
+transform = Transform( -3.31388, 0, 4.30597e-06, 0, 1, 0, -1.37023e-06, 0, -2.37268, -2.98612, -2.74717, 2.95287 )
+mesh = ExtResource( 20 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="Stairway"]
+transform = Transform( 0.0256395, 0, 0, 0, 1, 0, 0, 0, 0.728814, -4.51785, -2.11131, 2.95335 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
 [connection signal="timeout" from="Conveyor/Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="Train"]
