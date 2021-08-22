@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/Environment/SatelliteTop.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Art/Environment/SatelliteBot.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Rotate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SatTop:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -359, 0 ) ]
+}
+
+[node name="Satellite" type="Spatial"]
+
+[node name="SatTop" type="MeshInstance" parent="."]
+transform = Transform( -0.994824, 0, -0.101618, 0, 1, 0, 0.101618, 0, -0.994824, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="SatBot" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Rotate"
+playback_speed = 0.5
+anims/Rotate = SubResource( 1 )
