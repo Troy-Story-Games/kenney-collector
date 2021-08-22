@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/toilet.obj-7cfcb93c046596c99c447ee44bb2f7d1.mesh"
+
+[deps]
+
+files=[ "res://.import/toilet.obj-7cfcb93c046596c99c447ee44bb2f7d1.mesh" ]
+
+source_file="res://Art/Objects/CrateContents/toilet.obj"
+dest_files=[ "res://.import/toilet.obj-7cfcb93c046596c99c447ee44bb2f7d1.mesh", "res://.import/toilet.obj-7cfcb93c046596c99c447ee44bb2f7d1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

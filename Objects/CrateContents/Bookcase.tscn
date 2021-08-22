@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/Objects/CrateContents/bookcaseClosed.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Objects/CrateContents.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.077109, 0.155847, 0.053085 )
+
+[node name="CrateContents" instance=ExtResource( 2 )]
+
+[node name="MeshInstance" parent="." index="0"]
+transform = Transform( 0.369263, 0, 0, 0, 0.369263, 0, 0, 0, 0.369263, 0.0653131, 0, -0.0387923 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="CollisionShape" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00886309, 0.159338, 0.00807047 )
+shape = SubResource( 1 )
