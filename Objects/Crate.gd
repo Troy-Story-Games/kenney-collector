@@ -29,19 +29,7 @@ func random_rotation():
     SoundFx.play_3d("BoxSpawn", global_transform.origin)
 
 
-func _on_ButtonPressArea_body_entered(_body):
-    SoundFx.play_3d("ButtonPress", global_transform.origin)
-    var mesh : ArrayMesh = button.mesh
-    var mat : SpatialMaterial = SpatialMaterial.new()
-    mat.albedo_color = PRESSED_COLOR
-    mesh.surface_set_material(1, mat)
-    button_pressed = true
-    emit_signal("button_pressed")
-    timer.start()
-
-
-func _on_Timer_timeout():
-    SoundFx.play_3d("BoxPoof", global_transform.origin)
+func delete_crate():
     var particles : CPUParticles = Utils.instance_scene_on_main(crateExplode, global_transform)
     particles.emitting = true
 
@@ -52,3 +40,24 @@ func _on_Timer_timeout():
 
     queue_free()
 
+
+func _on_ButtonPressArea_body_entered(_body):
+    if button_pressed:
+        return
+    button_pressed = true
+
+    SoundFx.play_3d("ButtonPress", global_transform.origin)
+    var mesh : ArrayMesh = button.mesh
+    var mat : SpatialMaterial = SpatialMaterial.new()
+    mat.albedo_color = PRESSED_COLOR
+    mesh.surface_set_material(1, mat)
+    emit_signal("button_pressed")
+    timer.start()
+
+
+func _on_Timer_timeout():
+    delete_crate()
+
+
+func _on_VisibilityNotifier_screen_exited():
+    queue_free()
