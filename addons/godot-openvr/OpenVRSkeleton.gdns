@@ -4,8 +4,7 @@
 
 [resource]
 
-resource_name = "OpenVRRenderModel"
-class_name = "OpenVRRenderModel"
+resource_name = "OpenVRSkeleton"
+class_name = "OpenVRSkeleton"
 library = ExtResource( 1 )
 _sections_unfolded = [ "Resource" ]
-

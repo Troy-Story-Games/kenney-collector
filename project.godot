@@ -34,21 +34,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Utils/MainInstances.gd"
 }, {
-"base": "OculusTracker",
-"class": "OculusHandTracker",
-"language": "GDScript",
-"path": "res://addons/godot_ovrmobile/example_scenes/oculus_hand_tracker.gd"
-}, {
-"base": "OculusTracker",
-"class": "OculusTouchController",
-"language": "GDScript",
-"path": "res://addons/godot_ovrmobile/example_scenes/oculus_touch_controller.gd"
-}, {
-"base": "ARVRController",
-"class": "OculusTracker",
-"language": "GDScript",
-"path": "res://addons/godot_ovrmobile/example_scenes/oculus_tracker.gd"
-}, {
 "base": "KinematicBody",
 "class": "OptionCrate",
 "language": "GDScript",
@@ -75,9 +60,6 @@ _global_script_class_icons={
 "Hand": "",
 "InfoScreen": "",
 "MainInstances": "",
-"OculusHandTracker": "",
-"OculusTouchController": "",
-"OculusTracker": "",
 "OptionCrate": "",
 "PlayerStats": "",
 "VRController": "",
@@ -117,7 +99,7 @@ enabled=PoolStringArray(  )
 
 [gdnative]
 
-singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib", "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
 
 [global]
 
