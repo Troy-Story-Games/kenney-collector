@@ -16,4 +16,5 @@ dest_files=[ "res://.import/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.me
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

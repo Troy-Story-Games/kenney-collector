@@ -16,4 +16,5 @@ dest_files=[ "res://.import/pirate_officer.obj-10b3e16802dc9f4ea9269bdfac48d462.
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

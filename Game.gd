@@ -1,12 +1,14 @@
 extends Spatial
 
 const crate = preload("res://Objects/Crate.tscn")
+const badCrate = preload("res://Objects/BadCrate.tscn")
 const crateExplode = preload("res://Objects/CrateExplode.tscn")
 const optionCrate = preload("res://Objects/OptionCrate.tscn")
 
-export(float) var SLOW_SPAWN_RATE = 2.5
-export(float) var FAST_SPAWN_RATE = 1.0
-export(float) var CONVEYOR_SPEED = 2.0
+export(float) var SLOW_SPAWN_RATE = 5.0
+export(float) var FAST_SPAWN_RATE = 3.0
+export(float) var CONVEYOR_SPEED = 1.0
+export(float) var BAD_CRATE_RISK = 0.1
 
 var playerStats = Utils.get_player_stats()
 var started = false
@@ -72,10 +74,20 @@ func stop_conveyor():
     timer.stop()
 
 
-func _on_Timer_timeout():
-    var instance : Crate = Utils.instance_scene_on_main(crate, spawn.global_transform)
+func spawn_crate(crate_type: PackedScene):
+    var instance = Utils.instance_scene_on_main(crate_type, spawn.global_transform)
     instance.apply_central_impulse(Vector3(5, 0, 0))
     instance.random_rotation()
+
+
+func _on_Timer_timeout():
+    if randf() <= BAD_CRATE_RISK:
+        spawn_crate(badCrate)
+        if randf() >= BAD_CRATE_RISK:
+            spawn_crate(crate)
+    else:
+        spawn_crate(crate)
+
     timer.start(spawn_rate)
 
 

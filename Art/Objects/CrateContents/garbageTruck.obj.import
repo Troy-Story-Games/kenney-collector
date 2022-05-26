@@ -16,4 +16,5 @@ dest_files=[ "res://.import/garbageTruck.obj-c9c79df76634b9693c517be10d981cf2.me
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286
