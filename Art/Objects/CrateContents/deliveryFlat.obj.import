@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh"
+uid="uid://dyir6ki55wglp"
+path="res://.godot/imported/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh"
 
 [deps]
 
-files=[ "res://.import/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh" ]
+files=["res://.godot/imported/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh"]
 
 source_file="res://Art/Objects/CrateContents/deliveryFlat.obj"
-dest_files=[ "res://.import/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh", "res://.import/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh" ]
+dest_files=["res://.godot/imported/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh", "res://.godot/imported/deliveryFlat.obj-8119016fda8b09340846a8c6fec3a875.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

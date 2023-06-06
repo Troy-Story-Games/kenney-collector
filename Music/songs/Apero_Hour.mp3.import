@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Apero_Hour.mp3-0b37d0140f349fd061066347e4d44c6b.mp3str"
+uid="uid://cq7rikn5jyccg"
+path="res://.godot/imported/Apero_Hour.mp3-0b37d0140f349fd061066347e4d44c6b.mp3str"
 
 [deps]
 
 source_file="res://Music/songs/Apero_Hour.mp3"
-dest_files=[ "res://.import/Apero_Hour.mp3-0b37d0140f349fd061066347e4d44c6b.mp3str" ]
+dest_files=["res://.godot/imported/Apero_Hour.mp3-0b37d0140f349fd061066347e4d44c6b.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh"
+uid="uid://bpsb6u55u2ju4"
+path="res://.godot/imported/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh"
 
 [deps]
 
-files=[ "res://.import/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh" ]
+files=["res://.godot/imported/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh"]
 
 source_file="res://Art/Objects/CrateContents/cookieChocolate.obj"
-dest_files=[ "res://.import/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh", "res://.import/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh" ]
+dest_files=["res://.godot/imported/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh", "res://.godot/imported/cookieChocolate.obj-1ed5027269ffb51b8c9f690687c85e66.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

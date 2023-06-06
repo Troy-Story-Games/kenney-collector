@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh"
+uid="uid://d37i2twvgi23l"
+path="res://.godot/imported/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh"
 
 [deps]
 
-files=[ "res://.import/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh" ]
+files=["res://.godot/imported/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh"]
 
 source_file="res://Art/Environment/platform_cornerOpen.obj"
-dest_files=[ "res://.import/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh", "res://.import/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh" ]
+dest_files=["res://.godot/imported/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh", "res://.godot/imported/platform_cornerOpen.obj-137c0d19dce499064fbe56502497f372.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

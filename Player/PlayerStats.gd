@@ -10,8 +10,8 @@ enum WhichHand {
 signal score_changed(result)
 signal high_score_changed(result)
 
-var total_score : int = 0 setget set_total_score
-var high_score : int = 0 setget set_high_score
+var total_score : int = 0: set = set_total_score
+var high_score : int = 0: set = set_high_score
 
 
 func set_total_score(value : int):

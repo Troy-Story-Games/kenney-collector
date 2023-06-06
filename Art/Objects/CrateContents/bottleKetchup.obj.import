@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh"
+uid="uid://engpldoxxwwv"
+path="res://.godot/imported/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh"
 
 [deps]
 
-files=[ "res://.import/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh" ]
+files=["res://.godot/imported/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh"]
 
 source_file="res://Art/Objects/CrateContents/bottleKetchup.obj"
-dest_files=[ "res://.import/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh", "res://.import/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh" ]
+dest_files=["res://.godot/imported/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh", "res://.godot/imported/bottleKetchup.obj-6dee503ed0ea4192814287fb7ed7cba3.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

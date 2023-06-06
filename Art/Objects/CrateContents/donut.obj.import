@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh"
+uid="uid://mq6ohpacdfam"
+path="res://.godot/imported/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh"
 
 [deps]
 
-files=[ "res://.import/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh" ]
+files=["res://.godot/imported/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh"]
 
 source_file="res://Art/Objects/CrateContents/donut.obj"
-dest_files=[ "res://.import/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh", "res://.import/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh" ]
+dest_files=["res://.godot/imported/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh", "res://.godot/imported/donut.obj-8e7f5d874aa33942fcfb515127cd453c.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

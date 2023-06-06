@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh"
+uid="uid://05hdrnv0imgh"
+path="res://.godot/imported/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh"
 
 [deps]
 
-files=[ "res://.import/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh" ]
+files=["res://.godot/imported/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh"]
 
 source_file="res://Art/Environment/formation_rock.obj"
-dest_files=[ "res://.import/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh", "res://.import/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh" ]
+dest_files=["res://.godot/imported/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh", "res://.godot/imported/formation_rock.obj-c9c2047034d6d337be717d032022812b.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

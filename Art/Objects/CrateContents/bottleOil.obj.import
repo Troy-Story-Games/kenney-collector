@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh"
+uid="uid://b7tp1gpj1ejvu"
+path="res://.godot/imported/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh"
 
 [deps]
 
-files=[ "res://.import/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh" ]
+files=["res://.godot/imported/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh"]
 
 source_file="res://Art/Objects/CrateContents/bottleOil.obj"
-dest_files=[ "res://.import/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh", "res://.import/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh" ]
+dest_files=["res://.godot/imported/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh", "res://.godot/imported/bottleOil.obj-ef0a49762c2dcf5e45f829e0c1a43d3c.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

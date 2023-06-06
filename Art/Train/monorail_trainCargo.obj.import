@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh"
+uid="uid://cylnhao5ha1sw"
+path="res://.godot/imported/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh"
 
 [deps]
 
-files=[ "res://.import/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh" ]
+files=["res://.godot/imported/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh"]
 
 source_file="res://Art/Train/monorail_trainCargo.obj"
-dest_files=[ "res://.import/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh", "res://.import/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh" ]
+dest_files=["res://.godot/imported/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh", "res://.godot/imported/monorail_trainCargo.obj-927cce4600a8e4c264dc366c0d6ea980.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

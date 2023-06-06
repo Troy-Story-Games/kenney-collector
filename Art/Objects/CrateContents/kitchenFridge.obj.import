@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh"
+uid="uid://dl6thauhxbfq2"
+path="res://.godot/imported/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh"
 
 [deps]
 
-files=[ "res://.import/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh" ]
+files=["res://.godot/imported/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh"]
 
 source_file="res://Art/Objects/CrateContents/kitchenFridge.obj"
-dest_files=[ "res://.import/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh", "res://.import/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh" ]
+dest_files=["res://.godot/imported/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh", "res://.godot/imported/kitchenFridge.obj-63d93cc1f982c7b9715f99cee7c019dc.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

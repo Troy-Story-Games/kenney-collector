@@ -8,250 +8,250 @@
 [ext_resource path="res://Train/Engine.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/Train/monorail_trackStraight.obj" type="ArrayMesh" id=7]
 
-[sub_resource type="CubeMesh" id=1]
+[sub_resource type="BoxMesh" id=1]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="StandardMaterial3D" id=2]
 albedo_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 13.2009, 7.18188, 18.8527 )
+[sub_resource type="BoxShape3D" id=3]
+size = Vector3( 13.2009, 7.18188, 18.8527 )
 
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 1, 2.23735, 6.09421 )
+[sub_resource type="BoxShape3D" id=4]
+size = Vector3( 1, 2.23735, 6.09421 )
 
-[node name="Train" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, -2, -1.2 )
+[node name="Train" type="Node3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, -2, -1.2 )
 script = ExtResource( 2 )
 
-[node name="NewTrainSpawn" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04535, 0.373075, 147.604 )
+[node name="NewTrainSpawn" type="Marker3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04535, 0.373075, 147.604 )
 
-[node name="FullTrain" type="Spatial" parent="."]
+[node name="FullTrain" type="Node3D" parent="."]
 
 [node name="Engine" parent="FullTrain" instance=ExtResource( 6 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, -4 )
+transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, -4 )
 collision_layer = 9
 
 [node name="Storage" parent="FullTrain" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0.2 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0.2 )
 
 [node name="Storage2" parent="FullTrain" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4.4 )
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4.4 )
 
-[node name="Background" type="Spatial" parent="."]
+[node name="Background" type="Node3D" parent="."]
 
-[node name="corridor_detailed2" type="MeshInstance" parent="Background"]
-transform = Transform( 8, 0, 0, 0, 5.871, 0, 0, 0, 2.49, 3.98378, -0.628875, 123.297 )
+[node name="corridor_detailed2" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 8, 0, 0, 0, 5.871, 0, 0, 0, 2.49, 3.98378, -0.628875, 123.297 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 
-[node name="BlackRect2" type="MeshInstance" parent="Background/corridor_detailed2"]
-transform = Transform( -7.27635e-10, 0, -0.39004, 0, 0.535171, 0, 0.0166463, 0, -1.70492e-08, -0.00400317, 0.541102, 0.159657 )
+[node name="BlackRect2" type="MeshInstance3D" parent="Background/corridor_detailed2"]
+transform = Transform3D( -7.27635e-10, 0, -0.39004, 0, 0.535171, 0, 0.0166463, 0, -1.70492e-08, -0.00400317, 0.541102, 0.159657 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="platform_end" type="MeshInstance" parent="Background/corridor_detailed2"]
-transform = Transform( -4.36169e-08, 0, -0.997838, 0, 1, 0, 1.01876, 0, -4.45313e-08, 0.00940567, -0.0682374, -0.30405 )
+[node name="platform_end" type="MeshInstance3D" parent="Background/corridor_detailed2"]
+transform = Transform3D( -4.36169e-08, 0, -0.997838, 0, 1, 0, 1.01876, 0, -4.45313e-08, 0.00940567, -0.0682374, -0.30405 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 
 [node name="TrackSection" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 0 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 0 )
 
 [node name="TrackSection2" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 11.9926 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 11.9926 )
 
 [node name="TrackSection3" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 23.9926 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 23.9926 )
 
 [node name="TrackSection4" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 35.8 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 35.8 )
 
 [node name="TrackSection5" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 47.7926 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 47.7926 )
 
 [node name="TrackSection6" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 59.7926 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 59.7926 )
 
 [node name="TrackSection7" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 71.8 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 71.8 )
 
 [node name="TrackSection8" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 83.7926 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 83.7926 )
 
 [node name="TrackSection9" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 95.7926 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 95.7926 )
 
 [node name="TrackSection10" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 107.6 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 107.6 )
 
 [node name="TrackSection11" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 119.593 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 119.593 )
 
 [node name="TrackSection12" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 131.593 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, 131.593 )
 
 [node name="TrackSection13" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -143.5 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -143.5 )
 
 [node name="TrackSection14" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -131.507 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -131.507 )
 
 [node name="TrackSection15" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -119.507 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -119.507 )
 
 [node name="TrackSection16" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -107.7 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -107.7 )
 
 [node name="TrackSection17" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -95.7074 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -95.7074 )
 
 [node name="TrackSection18" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -83.7074 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -83.7074 )
 
 [node name="TrackSection19" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -71.7 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -71.7 )
 
 [node name="TrackSection20" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -59.7074 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -59.7074 )
 
 [node name="TrackSection21" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -47.7074 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -47.7074 )
 
 [node name="TrackSection22" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -35.9 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -35.9 )
 
 [node name="TrackSection23" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -23.9074 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -23.9074 )
 
 [node name="TrackSection24" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -11.9074 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -11.9074 )
 
 [node name="TrackSection34" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -179.2 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -179.2 )
 
 [node name="TrackSection35" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -167.207 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -167.207 )
 
 [node name="TrackSection36" parent="Background" instance=ExtResource( 4 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -155.207 )
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -155.207 )
 
-[node name="JustTrack" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -187 )
+[node name="JustTrack" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -187 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack2" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -191 )
+[node name="JustTrack2" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -191 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack3" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -195 )
+[node name="JustTrack3" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -195 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack4" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -199 )
+[node name="JustTrack4" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -199 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack5" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -203 )
+[node name="JustTrack5" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -203 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack6" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -207 )
+[node name="JustTrack6" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -207 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack7" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -211 )
+[node name="JustTrack7" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -211 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack8" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -215 )
+[node name="JustTrack8" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -215 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack9" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -219 )
+[node name="JustTrack9" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -219 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack10" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -223 )
+[node name="JustTrack10" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -223 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack11" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -227 )
+[node name="JustTrack11" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -227 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack12" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -231 )
+[node name="JustTrack12" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -231 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack13" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -235 )
+[node name="JustTrack13" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -235 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack14" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -239 )
+[node name="JustTrack14" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -239 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack15" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -243 )
+[node name="JustTrack15" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -243 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="JustTrack16" type="MeshInstance" parent="Background"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -247 )
+[node name="JustTrack16" type="MeshInstance3D" parent="Background"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 4, 0, -247 )
 mesh = ExtResource( 7 )
 material/0 = null
 material/1 = null
 
-[node name="EndOfTrackArea" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00882, 2.00448, -184.888 )
+[node name="EndOfTrackArea" type="Area3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00882, 2.00448, -184.888 )
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape" type="CollisionShape" parent="EndOfTrackArea"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 67.7275 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndOfTrackArea"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 67.7275 )
 shape = SubResource( 3 )
 
-[node name="StartArea" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0299, 0.984837, -1.48278 )
+[node name="StartArea" type="Area3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0299, 0.984837, -1.48278 )
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape" type="CollisionShape" parent="StartArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartArea"]
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="EndOfTrackArea" to="." method="_on_Area_body_entered"]

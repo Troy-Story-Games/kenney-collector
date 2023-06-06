@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh"
+uid="uid://d1xujmq0edwmg"
+path="res://.godot/imported/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh"
 
 [deps]
 
-files=[ "res://.import/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh" ]
+files=["res://.godot/imported/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh"]
 
 source_file="res://Art/Objects/crateStrong.obj"
-dest_files=[ "res://.import/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh", "res://.import/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh" ]
+dest_files=["res://.godot/imported/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh", "res://.godot/imported/crateStrong.obj-b1c72bdc042333768eb9ea79b89370ab.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

@@ -1,5 +1,6 @@
 extends Node
 
+var interface: XRInterface
 var vr_initialized := false
 var mobile_vr := false
 var mobile_vr_runtime_initialized := false
@@ -7,75 +8,61 @@ var kenney_assets : Array = []
 
 
 func initialize_vr():
-    if mobile_vr and not mobile_vr_runtime_initialized:
-        print("DEBUG: Mobile VR runtime initialized")
-        var ovr_performance = preload("res://addons/godot_ovrmobile/OvrPerformance.gdns").new()
-        ovr_performance.set_clock_levels(1, 1)
-        ovr_performance.set_extra_latency_mode(1)
-        mobile_vr_runtime_initialized = true
-        return
+	if vr_initialized:
+		return
+	
+	Engine.max_fps = 90
+	Engine.physics_ticks_per_second = 90
+	
+	interface = XRServer.find_interface("OpenXR")
+	if interface:
+		interface.initialize()
+	
+	if interface and interface.is_initialized():
+		print("OpenXR initialized successfully")
+	
+		# Turn off v-sync
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	
+		# Tell the viewport to use XR
+		get_viewport().use_xr = true
 
-    if vr_initialized:
-        return  # Don't initialize VR more than once
-
-    var vr_interface = ARVRServer.find_interface("OVRMobile")
-    if vr_interface:
-        print("DEBUG: Mobile VR platform detected")
-        var ovr_init_config = preload("res://addons/godot_ovrmobile/OvrInitConfig.gdns").new()
-        ovr_init_config.set_render_target_size_multiplier(1)
-
-        if vr_interface.initialize():
-            get_viewport().arvr = true
-
-        mobile_vr = true
-    else:
-        print("DEBUG: Desktop VR platform detected")
-        vr_interface = ARVRServer.find_interface("OpenVR")
-        if vr_interface and vr_interface.initialize():
-            get_viewport().arvr = true
-            get_viewport().hdr = false
-            OS.vsync_enabled = false
-            Engine.target_fps = 90
-            # Physics FPS set to 90 in project setttings for smooth interactions
-            # Tweak this back to the default of 60 if not making a VR game.
-
-    load_kenney_assets()
-    vr_initialized = true
+	load_kenney_assets()
+	vr_initialized = true
 
 
 func load_kenney_assets():
-    # Load the kenney assets
-    kenney_assets = []
-    var kenney_asset_dir = Directory.new()
-    kenney_asset_dir.open("res://Objects/CrateContents")
-    kenney_asset_dir.list_dir_begin(true, true)
-    var asset = kenney_asset_dir.get_next()
-    while asset != "":
-        kenney_assets.append(load("res://Objects/CrateContents/" + asset))
-        asset = kenney_asset_dir.get_next()
+	# Load the kenney assets
+	kenney_assets = []
+	var kenney_asset_dir = DirAccess.open("res://Objects/CrateContents")
+	kenney_asset_dir.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
+	var asset = kenney_asset_dir.get_next()
+	while asset != "":
+		kenney_assets.append(load("res://Objects/CrateContents/" + asset))
+		asset = kenney_asset_dir.get_next()
 
 
 func get_random_kenney_asset() -> PackedScene:
-    kenney_assets.shuffle()
-    return kenney_assets[0]
+	kenney_assets.shuffle()
+	return kenney_assets[0]
 
 
 func instance_scene_on_main(packed_scene: PackedScene, position) -> Node:
-    var main := get_tree().current_scene
-    var instance : Spatial = packed_scene.instance()
-    main.add_child(instance)
+	var main := get_tree().current_scene
+	var instance : Node3D = packed_scene.instantiate()
+	main.add_child(instance)
 
-    if position is Transform:
-        instance.global_transform = position
-    elif position is Vector3:
-        instance.global_transform.origin = position
+	if position is Transform3D:
+		instance.global_transform = position
+	elif position is Vector3:
+		instance.global_transform.origin = position
 
-    return instance
+	return instance
 
 
 func get_main_instances() -> Resource:
-    return ResourceLoader.load("res://Utils/MainInstances.tres")
+	return ResourceLoader.load("res://Utils/MainInstances.tres")
 
 
 func get_player_stats() -> Resource:
-    return ResourceLoader.load("res://Player/PlayerStats.tres")
+	return ResourceLoader.load("res://Player/PlayerStats.tres")

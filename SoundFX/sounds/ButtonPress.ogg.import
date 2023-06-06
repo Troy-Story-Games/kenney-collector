@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/ButtonPress.ogg-6aa946cf93fefa8497baf1f87299c3dc.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cm8tpux23w36d"
+path="res://.godot/imported/ButtonPress.ogg-6aa946cf93fefa8497baf1f87299c3dc.oggvorbisstr"
 
 [deps]
 
 source_file="res://SoundFX/sounds/ButtonPress.ogg"
-dest_files=[ "res://.import/ButtonPress.ogg-6aa946cf93fefa8497baf1f87299c3dc.oggstr" ]
+dest_files=["res://.godot/imported/ButtonPress.ogg-6aa946cf93fefa8497baf1f87299c3dc.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Loopster.mp3-1072b1ab379cb09b80f8411474b7752e.mp3str"
+uid="uid://bgiwsesbxiba2"
+path="res://.godot/imported/Loopster.mp3-1072b1ab379cb09b80f8411474b7752e.mp3str"
 
 [deps]
 
 source_file="res://Music/songs/Loopster.mp3"
-dest_files=[ "res://.import/Loopster.mp3-1072b1ab379cb09b80f8411474b7752e.mp3str" ]
+dest_files=["res://.godot/imported/Loopster.mp3-1072b1ab379cb09b80f8411474b7752e.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

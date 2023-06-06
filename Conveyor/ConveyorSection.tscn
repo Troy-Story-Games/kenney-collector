@@ -4,29 +4,29 @@
 [ext_resource path="res://Art/Convayor/road_straightBarrier.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Art/Convayor/road_straight.obj" type="ArrayMesh" id=3]
 
-[node name="ConveyorSection" type="Spatial"]
+[node name="ConveyorSection" type="Node3D"]
 
-[node name="Pillar1" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4 )
+[node name="Pillar1" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.4 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 
-[node name="Pillar2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4 )
+[node name="Pillar2" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 
-[node name="Belt" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+[node name="Belt" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 mesh = ExtResource( 3 )
 material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
 
-[node name="Edge" type="MeshInstance" parent="Belt"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+[node name="Edge" type="MeshInstance3D" parent="Belt"]
+transform = Transform3D( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
 mesh = ExtResource( 2 )
 material/0 = null

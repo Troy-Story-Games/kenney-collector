@@ -5,4 +5,4 @@ var player : VRPlayer = null
 
 
 func reset():
-    player = null
+	player = null

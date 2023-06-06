@@ -1,2 +1,0 @@
-*.aar filter=lfs diff=lfs merge lfs -text
-*.gdap filter=lfs diff=lfs merge lfs -text

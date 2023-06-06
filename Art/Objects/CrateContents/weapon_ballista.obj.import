@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh"
+uid="uid://ilexc6fnjh8v"
+path="res://.godot/imported/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh"
 
 [deps]
 
-files=[ "res://.import/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh" ]
+files=["res://.godot/imported/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh"]
 
 source_file="res://Art/Objects/CrateContents/weapon_ballista.obj"
-dest_files=[ "res://.import/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh", "res://.import/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh" ]
+dest_files=["res://.godot/imported/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh", "res://.godot/imported/weapon_ballista.obj-965cfb784c777a63a4bb6d5cb1b88fec.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

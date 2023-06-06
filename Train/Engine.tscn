@@ -2,19 +2,19 @@
 
 [ext_resource path="res://Art/Train/monorail_trainFront.obj" type="ArrayMesh" id=1]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.258868, 0.392903, 0.533067 )
+[sub_resource type="BoxShape3D" id=1]
+size = Vector3( 0.258868, 0.392903, 0.533067 )
 
-[node name="Engine" type="KinematicBody"]
+[node name="Engine" type="CharacterBody3D"]
 collision_mask = 0
 
-[node name="Train" type="MeshInstance" parent="."]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+[node name="Train" type="MeshInstance3D" parent="."]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.64013, 0.0873438 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.64013, 0.0873438 )
 shape = SubResource( 1 )

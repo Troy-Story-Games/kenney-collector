@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh"
+uid="uid://b3vdyc3ka0fhe"
+path="res://.godot/imported/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh"
 
 [deps]
 
-files=[ "res://.import/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh" ]
+files=["res://.godot/imported/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh"]
 
 source_file="res://Art/Objects/CrateContents/bacon.obj"
-dest_files=[ "res://.import/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh", "res://.import/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh" ]
+dest_files=["res://.godot/imported/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh", "res://.godot/imported/bacon.obj-6201427a22ded988bd4d462a8364bbd0.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

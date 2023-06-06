@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh"
+uid="uid://de665ygaxsf5m"
+path="res://.godot/imported/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh"
 
 [deps]
 
-files=[ "res://.import/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh" ]
+files=["res://.godot/imported/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh"]
 
 source_file="res://Art/Environment/alien.obj"
-dest_files=[ "res://.import/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh", "res://.import/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh" ]
+dest_files=["res://.godot/imported/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh", "res://.godot/imported/alien.obj-f2d105066df6c7ea0dcdc315f10e6cad.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh"
+uid="uid://bq282sakug2r8"
+path="res://.godot/imported/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh"
 
 [deps]
 
-files=[ "res://.import/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh" ]
+files=["res://.godot/imported/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh"]
 
 source_file="res://Art/Objects/CrateContents/police.obj"
-dest_files=[ "res://.import/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh", "res://.import/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh" ]
+dest_files=["res://.godot/imported/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh", "res://.godot/imported/police.obj-d8cdd8513c35461163a6c40241f7b797.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

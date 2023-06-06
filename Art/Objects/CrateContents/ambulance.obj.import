@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh"
+uid="uid://c2k7vrvqkjuue"
+path="res://.godot/imported/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh"
 
 [deps]
 
-files=[ "res://.import/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh" ]
+files=["res://.godot/imported/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh"]
 
 source_file="res://Art/Objects/CrateContents/ambulance.obj"
-dest_files=[ "res://.import/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh", "res://.import/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh" ]
+dest_files=["res://.godot/imported/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh", "res://.godot/imported/ambulance.obj-23578737b12ea7adac6fc821363f75cf.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

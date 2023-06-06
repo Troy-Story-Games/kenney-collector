@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh"
+uid="uid://dl5upx4q53gx1"
+path="res://.godot/imported/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh"
 
 [deps]
 
-files=[ "res://.import/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh" ]
+files=["res://.godot/imported/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh"]
 
 source_file="res://Art/Objects/CrateContents/potStew.obj"
-dest_files=[ "res://.import/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh", "res://.import/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh" ]
+dest_files=["res://.godot/imported/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh", "res://.godot/imported/potStew.obj-ff2913516d39e3879629a8303f24c07f.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

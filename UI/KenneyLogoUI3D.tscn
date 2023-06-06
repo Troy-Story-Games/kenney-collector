@@ -1,67 +1,74 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://15cmlcdc7xwg"]
 
-[ext_resource path="res://UI/GUIPanel3D.tscn" type="PackedScene" id=1]
-[ext_resource path="res://UI/KenneyLogo.tscn" type="PackedScene" id=2]
+[ext_resource type="PackedScene" path="res://UI/GUIPanel3D.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://o33xo4yhk31t" path="res://UI/KenneyLogo.tscn" id="2"]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="ViewportTexture" id="ViewportTexture_5svde"]
+viewport_path = NodePath("SubViewport")
 
-[sub_resource type="QuadMesh" id=2]
-material = SubResource( 1 )
-size = Vector2( 2, 1.172 )
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25shh"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_5svde")
 
-[sub_resource type="ViewportTexture" id=3]
+[sub_resource type="QuadMesh" id="QuadMesh_mqb31"]
+material = SubResource("StandardMaterial3D_25shh")
+size = Vector2(2, 1.172)
 
-[sub_resource type="SpatialMaterial" id=4]
-flags_unshaded = true
-albedo_texture = SubResource( 3 )
-
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id="5"]
 resource_name = "Dance"
 length = 4.0
-loop = true
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, -35 ), Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, -35), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id="6"]
 resource_name = "Rotate"
 length = 15.0
-loop = true
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 15 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -359 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -359)]
 }
 
-[node name="KenneyLogoUI3D" instance=ExtResource( 1 )]
-transform = Transform( 0.99833, 0.0577668, 0, -0.0577668, 0.99833, 0, 0, 0, 1, 0, 0, 0 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ev14"]
+_data = {
+"Dance": SubResource("5"),
+"Rotate": SubResource("6")
+}
 
-[node name="Viewport" parent="." index="0"]
-size = Vector2( 1024, 600 )
+[node name="KenneyLogoUI3D" instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="KenneyLogo" parent="Viewport" index="0" instance=ExtResource( 2 )]
+[node name="SubViewport" parent="." index="0"]
+disable_3d = true
+size = Vector2i(1024, 600)
+render_target_clear_mode = 2
+render_target_update_mode = 1
 
-[node name="MeshInstance" parent="." index="2"]
-mesh = SubResource( 2 )
-material/0 = SubResource( 4 )
+[node name="KenneyLogo" parent="SubViewport" index="0" instance=ExtResource("2")]
+
+[node name="MeshInstance3D" parent="." index="2"]
+mesh = SubResource("QuadMesh_mqb31")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 autoplay = "Rotate"
-anims/Dance = SubResource( 5 )
-anims/Rotate = SubResource( 6 )
+libraries = {
+"": SubResource("AnimationLibrary_3ev14")
+}

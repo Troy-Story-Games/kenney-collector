@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh"
+uid="uid://23neb48q8csj"
+path="res://.godot/imported/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh"
 
 [deps]
 
-files=[ "res://.import/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh" ]
+files=["res://.godot/imported/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh"]
 
 source_file="res://Art/Objects/CrateContents/cake.obj"
-dest_files=[ "res://.import/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh", "res://.import/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh" ]
+dest_files=["res://.godot/imported/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh", "res://.godot/imported/cake.obj-297f70c8f243fe9999ae9c4dfc2c4702.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

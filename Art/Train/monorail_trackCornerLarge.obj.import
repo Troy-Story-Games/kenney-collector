@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh"
+uid="uid://cn6oruppm25c4"
+path="res://.godot/imported/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh"
 
 [deps]
 
-files=[ "res://.import/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh" ]
+files=["res://.godot/imported/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh"]
 
 source_file="res://Art/Train/monorail_trackCornerLarge.obj"
-dest_files=[ "res://.import/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh", "res://.import/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh" ]
+dest_files=["res://.godot/imported/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh", "res://.godot/imported/monorail_trackCornerLarge.obj-3d48645218eef127b5a5802947c7fe76.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

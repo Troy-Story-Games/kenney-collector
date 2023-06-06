@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh"
+uid="uid://b3edgwdmbe5xc"
+path="res://.godot/imported/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh"
 
 [deps]
 
-files=[ "res://.import/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh" ]
+files=["res://.godot/imported/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh"]
 
 source_file="res://Art/Environment/corridor_detailed.obj"
-dest_files=[ "res://.import/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh", "res://.import/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh" ]
+dest_files=["res://.godot/imported/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh", "res://.godot/imported/corridor_detailed.obj-0d3e4c5c87e98595c99c0ea27d4edfaf.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

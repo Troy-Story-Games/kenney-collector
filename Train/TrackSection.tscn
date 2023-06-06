@@ -3,152 +3,152 @@
 [ext_resource path="res://Art/Train/monorail_trackSupport.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Art/Train/monorail_trackStraight.obj" type="ArrayMesh" id=2]
 
-[node name="TrackSection" type="MeshInstance"]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+[node name="TrackSection" type="MeshInstance3D"]
+transform = Transform3D( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 
-[node name="Section2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+[node name="Section2" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 
-[node name="Section3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+[node name="Section3" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
 mesh = ExtResource( 2 )
 material/0 = null
 material/1 = null
 
-[node name="Support" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
+[node name="Support" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500058, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.991208, 0 )
+[node name="Support2" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.991208, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.49121, 0 )
+[node name="Support3" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.49121, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support4" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.97506, 0 )
+[node name="Support4" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.97506, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support5" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.46621, 0 )
+[node name="Support5" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.46621, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support6" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.96621, 0 )
+[node name="Support6" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.96621, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support7" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.45006, 0 )
+[node name="Support7" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.45006, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support8" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.94121, 0 )
+[node name="Support8" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.94121, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support9" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.44121, 0 )
+[node name="Support9" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.44121, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support10" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.92506, 0 )
+[node name="Support10" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.92506, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support11" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.41621, 0 )
+[node name="Support11" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.41621, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support12" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.91621, 0 )
+[node name="Support12" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.91621, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support13" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.40006, 0 )
+[node name="Support13" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.40006, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support14" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.89121, 0 )
+[node name="Support14" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.89121, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support15" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.39121, 0 )
+[node name="Support15" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.39121, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support16" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.87506, 0 )
+[node name="Support16" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.87506, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support17" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.36621, 0 )
+[node name="Support17" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.36621, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support18" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.86621, 0 )
+[node name="Support18" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.86621, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
 material/2 = null
 
-[node name="Support19" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.35006, 0 )
+[node name="Support19" type="MeshInstance3D" parent="."]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.35006, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null

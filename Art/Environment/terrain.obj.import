@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh"
+uid="uid://bymx77au1xhy"
+path="res://.godot/imported/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh"
 
 [deps]
 
-files=[ "res://.import/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh" ]
+files=["res://.godot/imported/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh"]
 
 source_file="res://Art/Environment/terrain.obj"
-dest_files=[ "res://.import/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh", "res://.import/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh" ]
+dest_files=["res://.godot/imported/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh", "res://.godot/imported/terrain.obj-ec65051c83fe4549510d1ab7e77c5a00.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

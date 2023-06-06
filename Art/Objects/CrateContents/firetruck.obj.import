@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh"
+uid="uid://dmqsq0gfqhy8v"
+path="res://.godot/imported/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh"
 
 [deps]
 
-files=[ "res://.import/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh" ]
+files=["res://.godot/imported/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh"]
 
 source_file="res://Art/Objects/CrateContents/firetruck.obj"
-dest_files=[ "res://.import/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh", "res://.import/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh" ]
+dest_files=["res://.godot/imported/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh", "res://.godot/imported/firetruck.obj-2c7cc7233d036deecfb8d26203e143d2.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh"
+uid="uid://dr4od2ugkvh4i"
+path="res://.godot/imported/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh"
 
 [deps]
 
-files=[ "res://.import/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh" ]
+files=["res://.godot/imported/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh"]
 
 source_file="res://Art/Environment/platform_small.obj"
-dest_files=[ "res://.import/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh", "res://.import/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh" ]
+dest_files=["res://.godot/imported/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh", "res://.godot/imported/platform_small.obj-8b76cb4bdac9f9fc33511760d21ccb4f.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

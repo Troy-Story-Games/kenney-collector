@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Deuces.mp3-6cf4f63214aabe6cf668d4353a224342.mp3str"
+uid="uid://ctt45kf7mggk3"
+path="res://.godot/imported/Deuces.mp3-6cf4f63214aabe6cf668d4353a224342.mp3str"
 
 [deps]
 
 source_file="res://Music/songs/Deuces.mp3"
-dest_files=[ "res://.import/Deuces.mp3-6cf4f63214aabe6cf668d4353a224342.mp3str" ]
+dest_files=["res://.godot/imported/Deuces.mp3-6cf4f63214aabe6cf668d4353a224342.mp3str"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

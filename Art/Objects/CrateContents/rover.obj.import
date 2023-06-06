@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh"
+uid="uid://8sdxsq4uxcmc"
+path="res://.godot/imported/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh"
 
 [deps]
 
-files=[ "res://.import/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh" ]
+files=["res://.godot/imported/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh"]
 
 source_file="res://Art/Objects/CrateContents/rover.obj"
-dest_files=[ "res://.import/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh", "res://.import/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh" ]
+dest_files=["res://.godot/imported/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh", "res://.godot/imported/rover.obj-11d15b14c39365339daa49e9a07af65f.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

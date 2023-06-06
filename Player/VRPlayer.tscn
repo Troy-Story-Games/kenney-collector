@@ -1,38 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://dw7xk1gsx3blx"]
 
-[ext_resource path="res://Player/VRController.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Player/VRPlayer.gd" type="Script" id=2]
+[ext_resource type="PackedScene" uid="uid://dpjty4p4rkbq6" path="res://Player/VRController.tscn" id="1"]
+[ext_resource type="Script" path="res://Player/VRPlayer.gd" id="2"]
 
-[sub_resource type="SphereMesh" id=1]
+[sub_resource type="SphereMesh" id="1"]
 radius = 0.1
 height = 0.2
 
-[sub_resource type="SphereShape" id=2]
+[sub_resource type="SphereShape3D" id="2"]
 radius = 0.1
 
-[node name="VRPlayer" type="ARVROrigin"]
-script = ExtResource( 2 )
+[node name="VRPlayer" type="XROrigin3D"]
+script = ExtResource("2")
 
-[node name="Camera" type="ARVRCamera" parent="."]
+[node name="Camera3D" type="XRCamera3D" parent="."]
 current = true
 far = 2048.0
 
-[node name="Head" type="KinematicBody" parent="Camera" groups=[
-"Player",
-]]
+[node name="Head" type="CharacterBody3D" parent="Camera3D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 0
 
-[node name="HeadMesh" type="MeshInstance" parent="Camera/Head"]
-mesh = SubResource( 1 )
-material/0 = null
+[node name="HeadMesh" type="MeshInstance3D" parent="Camera3D/Head"]
+mesh = SubResource("1")
 
-[node name="CollisionShape" type="CollisionShape" parent="Camera/Head"]
-shape = SubResource( 2 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Head"]
+shape = SubResource("2")
 
-[node name="VRControllerA" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+[node name="VRControllerA" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+tracker = &"left_hand"
+pose = &"aim"
 
-[node name="VRControllerB" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
-controller_id = 2
+[node name="VRControllerB" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+tracker = &"right_hand"
+pose = &"aim"

@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh"
+uid="uid://dim2alwlpgcky"
+path="res://.godot/imported/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh"
 
 [deps]
 
-files=[ "res://.import/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh" ]
+files=["res://.godot/imported/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh"]
 
 source_file="res://Art/Convayor/road_straight.obj"
-dest_files=[ "res://.import/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh", "res://.import/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh" ]
+dest_files=["res://.godot/imported/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh", "res://.godot/imported/road_straight.obj-3e150d158ccb9e422ba6931f156fb8fe.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true

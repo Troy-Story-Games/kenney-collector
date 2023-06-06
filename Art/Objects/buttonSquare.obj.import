@@ -1,19 +1,21 @@
 [remap]
 
 importer="wavefront_obj"
+importer_version=1
 type="Mesh"
-path="res://.import/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh"
+uid="uid://8bdywbgdaqdx"
+path="res://.godot/imported/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh"
 
 [deps]
 
-files=[ "res://.import/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh" ]
+files=["res://.godot/imported/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh"]
 
 source_file="res://Art/Objects/buttonSquare.obj"
-dest_files=[ "res://.import/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh", "res://.import/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh" ]
+dest_files=["res://.godot/imported/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh", "res://.godot/imported/buttonSquare.obj-b0ef3ade6bd934ea430f1590ad4be673.mesh"]
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true
